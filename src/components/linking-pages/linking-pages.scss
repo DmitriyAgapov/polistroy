@@ -1,0 +1,7 @@
+@import "../../styles/helpers/_helpers";
+
+.gulp-pages {
+    @include max-screen(1024px) {
+        display: none;
+    }
+}

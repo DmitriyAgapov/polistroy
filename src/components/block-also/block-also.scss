@@ -1,0 +1,24 @@
+@import "../../styles/helpers/_helpers";
+
+.block-also {
+    display: none;
+    @include min-screen(768px) {
+        display: block;
+    }
+    .block__title {
+        margin-bottom: 42px;
+    }
+    .block__items {
+        display: grid;
+        grid-template: auto/1fr;
+        //max-width: 100%;
+        //flex-flow: row wrap;
+        flex: 1 100%;
+
+        @include min-screen(768px) {
+            grid-template: auto/1fr 1fr 1fr;
+        }
+
+
+    }
+}

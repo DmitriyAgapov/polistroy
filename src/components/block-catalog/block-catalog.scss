@@ -1,0 +1,102 @@
+@import "../../styles/helpers/_helpers";
+
+.block-catalog {
+    .block__content {
+        display: flex;
+        flex-flow: row wrap;
+
+    }
+    .block__items {
+        display: grid;
+        grid-template: auto/1fr 1fr;
+        //max-width: 100%;
+        //flex-flow: row wrap;
+        flex: 1 100%;
+
+        @include min-screen(450px) {
+            grid-template: auto/1fr 1fr 1fr;
+        }
+
+        @include min-screen(768px) {
+            grid-template: auto/1fr 1fr 1fr;
+        }
+    }
+    .block__links {
+        display: flex;
+
+        margin-top: 1px;
+
+
+        a {
+            margin: auto;
+        }
+        @include max-screen(767px) {
+            background: #fff;
+            padding: 40px 0 60px;
+        }
+        @include min-screen(768px) {
+            margin: 40px 0 0;
+        }
+        @include min-screen(1024px) {
+            margin: 80px 0 0;
+        }
+    }
+}
+.block-catalog-front {
+    .block__items .item:last-child {
+        &:before {
+            background: #fff;
+        }
+
+        .item__image {
+            display: flex;
+
+            img {
+                height: 33%;
+                margin: auto;
+                width: 33%;
+
+            }
+        }
+    }
+}
+.block-catalog.block-catalog-categories {
+    @include max-screen(768px) {
+        padding: 0;
+    }
+    .block__title {
+        @include max-screen(1023px) {
+            font-size: 24px;
+        }
+    }
+    .block__items {
+        display: grid;
+        grid-template: auto/1fr;
+        //max-width: 100%;
+        //flex-flow: row wrap;
+        flex: 1 100%;
+
+        @include min-screen(565px) {
+           grid-template: auto/1fr 1fr;
+        }
+
+        @include min-screen(1024px) {
+            grid-template: auto/1fr 1fr 1fr;
+        }
+    }
+
+}
+
+.block-catalog.block-catalog-category-with-goods {
+    .block__items {
+        display: grid;
+        grid-template: auto/1fr;
+        //max-width: 100%;
+        //flex-flow: row wrap;
+        flex: 1 100%;
+        grid-gap: 1px;
+        @include min-screen(768px) {
+            grid-template: auto/1fr 1fr;
+        }
+    }
+}

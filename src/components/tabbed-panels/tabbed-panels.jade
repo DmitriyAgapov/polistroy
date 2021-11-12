@@ -1,0 +1,70 @@
+// tabbed-panels
++b.tabbed-panels.block-inner
+    .container-fluid
+        .tabbed-inner
+            +e.link.INPUT(type="radio", name="tabbed-inner", id="desc", checked)
+            label(for="desc") Описание
+            +e.block
+                p Секционные почтовые ящики для подъездов многоквартирных домов серии «Орион Престиж» со стеклом и задней стенкой. Могут быть от 1-й до 9-и секций.
+                p  С задней стенкой;
+                    | Дверцы со стеклом;
+                    | Корреспонденция располагается в секции под углом 50 градусов;
+                    | Почтовый ящик имеет толщину металла 0.6 мм;
+                    | Дверцы открываются слева-направо;
+                    | Полимерно-порошковая окраска, стандартный цвет RAL7035;
+                    | Замки установлены, в комплекте 2 ключа;
+                    | Качественная упаковка (4-х клапанная коробка с маркировкой).
+                    | Для оптовых покупателей и дилеров существует система скидок.
+                    | Качественная упаковка (4-х клапанная коробка с маркировкой).
+                    | Для оптовых покупателей и дилеров существует система скидок.
+            +e.link.INPUT(type="radio", name="tabbed-inner", id="spec")
+            label(for="spec") Характеристики
+            +e.block
+                +e.row
+                    +e.first-col
+                        table
+                            tr
+                                td Габариты
+                                td 370 х 380 х 180 мм
+                            tr
+                                td Способ установки
+                                td Для крепления на стену
+                            tr
+                                td Покрытие
+                                td Полимерно-порошковое
+                            tr
+                                td Материал изготовления корпуса
+                                td Сталь 0.6 мм
+                            tr
+                                td Возможность эксплуатации на открытом воздухе
+                                td Нет
+                            tr
+                                td Тип загрузки корреспонденции
+                                td Через прорезь в фасадной части
+                            tr
+                                td Количество секций
+                                td 2 секции
+                            tr
+                                td Количество ключей в комплекте
+                                td 2 шт закрепляется к каждой секции
+                            tr
+                                td Наличие замка
+                                td Установлен
+                    +e.second-col
+                        img(src="img/product/2nd-col.png")
+            +e.link.INPUT(type="radio", name="tabbed-inner", id="docs")
+            label(for="docs") Документация
+            +e.block
+                +e.items
+                    +e.item
+                        +b.btn.btn_pdf-list.A Папорт изделия
+                    +e.item
+                        +b.btn.btn_pdf-list.A Инструкция по сборке
+                    +e.item
+                        +b.btn.btn_pdf-list.A Гарантийный талон
+            +e.link.INPUT(type="radio", name="tabbed-inner", id="video")
+            label(for="video") Видео
+            +e.block
+                +e.content
+                    //iframe(src='https://www.youtube.com/embed/7sbbb7Dt3D8' allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture' allowfullscreen='' width='320' height='200' frameborder='0')
+// КОНЕЦ: tabbed-panels

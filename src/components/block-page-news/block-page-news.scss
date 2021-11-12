@@ -1,0 +1,10 @@
+@import "../../styles/helpers/_helpers";
+
+.block-page-news {
+    @include max-screen(767px) {
+        margin: 0 -18px;
+        display: grid;
+        grid-template: auto/repeat(auto-fit, minmax(320px,1fr));
+        grid-gap: 1px;
+    }
+}

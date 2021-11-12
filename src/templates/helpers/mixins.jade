@@ -1,0 +1,73 @@
+mixin style(href)
+    link(rel="stylesheet", href=href)
+mixin script(src)
+    script(src=src)
+
+mixin btnLink(href, style, classes)
+    - var style = (typeof style === 'underfined') ? "default" : style
+    - var classes = (typeof classes === 'underfined') ? "default" : classes
+    +b.A.btn(href=href, class=['_' + style, classes])
+        span
+            block
+
+mixin btn(style, classes)
+    - var style = (typeof style === 'underfined') ? "default" : style
+    - var classes = (typeof classes === 'underfined') ? "default" : classes
+    +b.BUTTON.btn(class=['_' + style, classes])
+        block
+
+mixin h1()
+    +b.page-title
+        h1
+            block
+mixin card-category(items, teaser)
+    //-- title = (typeof items.title === 'underfined') ? "default" : items.title
+    //-- img = (typeof items.img === 'underfined') ? "default" : items.img
+    //-- href = (typeof items.href === 'underfined') ? "default" : items.href
+    +b.item.item-catalog(class="item-catalog-teaser#{teaser}")
+        +e.link.A(href="#{items.href}")
+            +e.image.DIV
+                img(src="img/product/#{items.img}", alt="#{items.title}")
+            +e.title.DIV
+                h3= items.title
+        if items.desc  === underfined
+        else
+            +e.desc.DIV!= items.desc
+        if items.price === underfined
+        else
+            +e.price.DIV!= items.price
+        if items.label === underfined
+        else
+            +e.label.DIV!= items.label
+mixin card-category-goods(items, teaser)
+    //-- title = (typeof items.title === 'underfined') ? "default" : items.title
+    //-- img = (typeof items.img === 'underfined') ? "default" : items.img
+    //-- href = (typeof items.href === 'underfined') ? "default" : items.href
+    +b.item.item-catalog(class="item-catalog-teaser#{teaser}")
+
+        +e.image.DIV
+            +e.link.A(href="#{items.href}")
+                img(src="img/product/#{items.img}", alt="#{items.title}")
+        +e.content
+            +e.title.DIV
+                +e.link.A(href="#{items.href}")
+                    h3= items.title
+            if items.desc  === underfined
+            else
+                +e.desc.DIV!= items.desc
+            if items.price === underfined
+            else
+                +e.price
+                    span Розничная цена:
+                    +e.price-value= items.price
+                        span ₽
+            if items.label === underfined
+            else
+                +e.label.DIV(class="#{items.labelcolor}")= items.label
+            +e.to-favorite
+                include ../../components/favorites/favorites
+
+
+mixin item-number(items)
+    +b.item-number-section.A(href="#")= items.text
+

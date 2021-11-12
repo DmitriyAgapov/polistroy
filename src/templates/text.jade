@@ -1,0 +1,68 @@
+extends layout/default
+
+block variables
+    - const title = "Текстовая страница";
+    - const description = '';
+    - const keywords = '';
+    - const pageClass = '';
+
+block styles
+    +style("http://code.jquery.com/ui/1.12.1/themes/smoothness/jquery-ui.css")
+    +style('https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/css/swiper.min.css')
+    +style('https://cdn.jsdelivr.net/npm/lightgallery/dist/css/lightgallery.min.css')
+    +style('css/common.min.css')              // базовые стили
+    +style('css/hd.min.css')                  // шапка
+    +style('css/slogan.min.css')              // слоган
+    +style('css/logo.min.css')                // логотип в шапке
+    +style('css/nv-main-menu.min.css')        // главное меню
+    +style('css/search.min.css')              // поиск в шапке
+    +style('css/favorites.min.css')           // избранное
+    +style('css/lightgallery.min.css')        // фотогаллерея
+    +style('css/nd-page.min.css')             // текстовая страница
+    +style('css/gallery.min.css')             // галерея
+    +style('css/bc.min.css')                  // хлебные крошки
+    +style('css/b.min.css')                   // дефолтные стили для блоков
+    +style('css/b-consult.min.css')           // блок консультации
+
+block scripts
+    +script('https://cdn.jsdelivr.net/npm/jquery@1.11.0/dist/jquery.min.js')
+    +script('https://cdn.jsdelivr.net/npm/jquery-once@2.2.0/jquery.once.min.js')
+    +script("https://code.jquery.com/ui/1.11.4/jquery-ui.min.js")
+    +script('https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/js/swiper.min.js')
+    +script('https://cdn.jsdelivr.net/npm/lightgallery/dist/js/lightgallery-all.min.js')
+    +script('https://cdn.jsdelivr.net/npm/inputmask/dist/min/jquery.inputmask.bundle.min.js')
+    +script('js/lightgallery.min.js')               // фотогаллерея
+    +script('js/gallery.min.js')                    // галерея
+    +script('js/search.min.js')                     // поиск в шапке
+    +script('js/theme.min.js')                      // кастомный файл
+
+block content
+    +b.wrapper
+        include ../components/hd//hd
+        //include ../../components/mobile/hd-m/hd-m
+        //include ../../components/mobile/hd-m/search-m-panel/search-m-panel
+        //include ../../components/mobile/hd-m/menu-m-panel/menu-m-panel
+        +b.title-panel
+            .container
+                include ../components/bc/bc
+                //include ../../components/mobile/bc-m/bc-m
+                +h1 H1 Gilroy 42 pt
+        +b.system-region
+            +e.container.container
+                //include ../../components/system-drupal/systemTabs
+                //include ../../components/system-drupal/message-status
+                //include ../../components/system-drupal/message-warning
+                //include ../../components/system-drupal/message-error
+                //include ../../components/system-drupal/message-error-webform
+        +b.mn-main
+            +e.container.container
+                .cn
+                    +b.MAIN.cn-main
+                        include ../components/nd-page/nd-page
+        +b.mn-bottom
+            +e.container.container
+                include ../components/b-consult/b-consult
+    //include ../../components/ft/_1/ft_1
+    //include ../../components/ft/_2/ft_2
+    //include ../../components/ft/_3/ft_3
+    //- include ../components/hd/hd

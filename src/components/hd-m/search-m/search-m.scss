@@ -1,0 +1,37 @@
+@import "../../../styles/helpers/_helpers";
+
+.search-m {
+    form {
+        display: flex;
+    }
+
+    .form-item {
+        width: 100%;
+    }
+
+    .form-text {
+        border: none;
+        color: #000000;
+        padding: 9px 44px 8px 16px !important;
+        border: 1px solid transparent;
+    }
+
+    .form-action {
+        position: absolute;
+        top: 0;
+        right: 0;
+    }
+
+    .form-submit {
+        border: none;
+        background-color: transparent;
+        background-image: url(../img/icons/search_icon2.png);
+        background-position: center;
+        background-repeat: no-repeat;
+        text-indent: -999999px;
+        height: 35px;
+        width: 44px;
+        padding: 0;
+        border-radius: none;
+    }
+}

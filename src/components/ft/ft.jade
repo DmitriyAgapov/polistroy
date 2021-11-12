@@ -1,0 +1,72 @@
+// ft (css)
++b.footer
+    .container
+        +e.top
+            +e.column.footer__intro
+                +e.logo
+                    include ../../img/logo.svg
+                .about Зарегистрированная торговая  марка изделий из листового металла. Принадлежит ООО «Полистрой»
+                ul.footer__links
+                    li
+                        a(href="#") О нас
+                    li
+                        a(href="#") Сотрудничество
+                include ../social/social
+            +e.column.footer__adress
+                +e.links__title
+                    h4 Контакты
+                +e.phone
+                    A(href="tel:88001234567") 8 800 123-45-67
+                    +e.phone__sub отдел продаж
+                +e.mail
+                    A(href="mailto:sales@polistroy74.ru") sales@polistroy74.ru
+                +e.adress
+                    //+e.adress-label Адрес завода:
+                    +e.adress-info г. Миасс, Челябинская обл.
+                +e.contact__info__full
+                    A(href="#") Полная контактная информация
+            +e.column.footer__links__catalog
+                +e.links__title
+                    h4 Продукция
+                ul
+                    li
+                        a(href="#") Секционные почтовые ящики
+                    li
+                        a(href="#") Индивидуальные почтовые ящики
+                    li
+                        a(href="#") Двери тамбурные металлические
+                    li
+                        a(href="#") Шкафы для раздевалок
+                    li
+                        a(href="#") Металлические урны для улицы
+                    li
+                        a(href="#") Клапаны мусоропровода
+                    li
+                        a(href="#") Контейнеры для спама и макулатуры
+                    li
+                        a(href="#") Информационные доски
+                    li
+                        a(href="#") Металлические ключницы
+                    li
+                        a(href="#") Совки для уборки улиц
+                    li
+                        a(href="#") Металлические аптечки
+                    li
+                        a(href="#") Измельчители зерна и корма
+            +e.column.footer__links__client
+                +e.links__title
+                    h4 Клиенту
+                ul
+                    li
+                        a(href="#") Найти дилера
+                    li
+                        a(href="#") Доставка
+                    li
+                        a(href="#") Гарантии и возврат
+
+        +e.bottom
+            include ../copyright/copyright
+            a(href="#") Политика конфиденциальности
+            div Разработка сайта -
+                a(href="https://algus.net", target="_blank") «Алгоритм Успеха»
+    // Конец: ft (css)

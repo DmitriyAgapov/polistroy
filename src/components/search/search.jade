@@ -1,0 +1,10 @@
+// search (css)
+.search
+    form(method="get", action="/search", accept-charset="UTF-8")
+        .form-item
+            input.form-text(type="text", placeholder="Введите название товара", id="edit-keys" name="key", autocomplete="off", v-model="keywords")
+        .form-actions
+            //-.search__submit
+            input.form-submit(type="submit", value="Найти", id="edit-submit-search" name="op")
+    //-include ../../search-result/search-result
+// КОНЕЦ: search (css)

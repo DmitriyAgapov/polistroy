@@ -1,0 +1,14 @@
+// block-related-items
++b.block.block-related-items
+    .container-fluid
+        +e.content
+            +e.title
+                H2 Вас также заинтересуют
+                +e.link
+                    include ../arrows/arrows
+            +e.items.swiper-container
+                +e.items-inner
+                    include ../item-catalog/teaser3/block-related
+                .swiper-pagination
+
+// КОНЕЦ: block-related-items

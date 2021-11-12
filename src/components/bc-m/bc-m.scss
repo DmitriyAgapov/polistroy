@@ -1,0 +1,26 @@
+@import "../../styles/helpers/_helpers";
+
+.bc-m {
+    margin-bottom: 40px;
+    background-color: #fff;
+    padding: 11px 18px 11px 35px;
+
+    display: none;
+    @include max-screen(1024px) {display: block;}
+}
+.bc-m__link {
+    color: #333;
+    font-weight: 500;
+	padding-left: 21px;
+	position: relative;
+    border-bottom: 0;
+    font-size: 13px;
+    line-height: 28px;
+    &:first-child:before {
+        content: '';
+        position: absolute;
+        top: 1px;
+        left: -17px;
+        @include svgsprite(arrow-left-bc);
+    }
+}

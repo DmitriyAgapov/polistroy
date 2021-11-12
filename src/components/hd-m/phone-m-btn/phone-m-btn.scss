@@ -1,0 +1,19 @@
+@import "../../../styles/helpers/_helpers";
+
+.phone-m-btn {}
+
+.phone-m-btn__link {
+    display: flex;
+    width: 22px;
+    height: 22px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 18px;
+    border-bottom: none;
+
+    &:hover path {
+        stroke: $color-red;
+    }
+}

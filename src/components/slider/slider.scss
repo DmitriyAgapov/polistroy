@@ -1,0 +1,27 @@
+@import "../../styles/helpers/_helpers";
+
+.slider-top__slide {
+    max-height: 277px;
+    height: 73vw;
+    width: 100%;
+
+    @include min-screen(768px) {
+        max-height: 398px;
+    }
+
+    @include min-screen(1024px) {
+        max-height: 502px;
+    }
+
+    @include min-screen(1280px) {
+        max-height: 621px;
+    }
+}
+
+.slider-top__slide img {
+    object-fit: cover;
+    height: 100%;
+
+
+
+}

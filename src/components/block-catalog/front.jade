@@ -1,0 +1,17 @@
+// block.block-catalog.block-catalog-front (css)
++b.block.block-catalog.block-catalog-front.bg-white
+    .container
+        +e.content
+            +e.title
+                H1 Наша продукция
+            +e.link
+                A.btn.btn_link.btn_arrow-right(href="#") Перейти в каталог
+            +e.items
+                include ../item-catalog/teaser1/front
+                +b.item.item-catalog.item-catalog-teaser1
+                    +e.link.A(href="#")
+                        +e.image.DIV
+                            img(src="img/icons-color/more-cat.svg")
+                        +e.title.DIV
+                            h3 Еще 5 категорий
+// block.block-catalog.block-catalog-front (css)

@@ -1,0 +1,13 @@
+@import "../../styles/helpers/_helpers";
+
+.block-number-section {
+    display: none;
+    @include min-screen(768px) {
+        display: block;
+    }
+}
+
+.block-number-section__items {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+}

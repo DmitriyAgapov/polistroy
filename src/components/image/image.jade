@@ -1,0 +1,11 @@
+// image
+// пресет для основного 638х427
+// пресет для превью 85х58
+- var numImage = 6;
+.swiper-container.gallery-top
+	.swiper-wrapper
+		- for (var i=1; i<=numImage; i++)
+			.swiper-slide
+				img(src="img/product/temp-box.png", alt="")
+
+		//- include ../arrows-slider/arrows-slider_s2

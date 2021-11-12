@@ -1,0 +1,31 @@
+@import "../../styles/helpers/_helpers";
+
+.block-config-mail-box {
+    display: none;
+    @include min-screen(768px) {
+        display: flex;
+        flex-flow: column;
+        align-items: center;
+    }
+    .block__image {
+        margin-bottom: 35px;
+    }
+    .block__content {
+        max-width: 600px;
+        text-align: center;
+        @include min-screen(768px) {
+            p {
+                font-weight: 500;
+                font-size: 15px;
+                line-height: 20px;
+            }
+        }
+        @include min-screen(1024px) {
+            p {
+                font-size: 20px;
+                line-height: 28px;
+            }
+        }
+
+    }
+}

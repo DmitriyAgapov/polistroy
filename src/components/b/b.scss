@@ -1,0 +1,133 @@
+@import "../../styles/helpers/_helpers";
+
+.block {
+    padding: 40px 0;
+
+    @include min-screen(768px) {
+        padding: 40px 0 60px;
+    }
+
+    @include min-screen(1024px) {
+        padding: 80px 0 105px;
+    }
+}
+.block-80-80 {
+    padding: 40px 0;
+    @include min-screen(768px) {
+        padding: 60px 0;
+    }
+    @include min-screen(1024px) {
+        padding: 80px 0;
+    }
+}
+.block-lg {
+    padding: 60px 0 60px;
+
+    @include min-screen(768px) {
+        padding: 60px 0 60px;
+    }
+
+    @include min-screen(1024px) {
+        padding: 105px 0 105px;
+    }
+}
+.block-inner {
+    margin: 80px 0;
+    &:first-child {
+        margin-top: 0;
+    }
+    &:last-child {
+        margin-bottom: 0;
+    }
+}
+.block-inner__links .btn {
+    margin: 30px 0;
+}
+.block-inner-80-105 {
+    margin: 40px 0;
+
+    @include min-screen(768px) {
+        margin: 40px 0 60px;
+    }
+
+    @include min-screen(1024px) {
+        margin: 80px 0 105px;
+    }
+}
+.block-sm {
+    padding: 25px 0 25px;
+
+    @include min-screen(768px) {
+        padding: 30px 0 30px;
+    }
+
+    @include min-screen(1024px) {
+        padding: 50px 0 50px;
+    }
+}
+
+
+
+.block__content > div:first-child > * {
+    margin-top: 0;
+}
+
+.block__content > div:last-child > * {
+    margin-bottom: 0;
+}
+.main-content {
+
+    .block__content > *:first-child {
+        margin-top: 0;
+    }
+    //.block__content > *:last-child {
+    //    margin-top: 0;
+    //}
+}
+.block>*.container>*:first-child {
+    margin-top: 0;
+}
+
+
+.b__hd {
+    margin-bottom: 42px;
+}
+
+.block__title {
+    h2 {
+        margin-top: 0;
+        margin-bottom: 42px;
+        @include max-screen(767px) {
+            margin-bottom: 30px;
+        }
+    }
+    margin: 0;
+    @include min-screen(1024px) {
+        display: flex;
+        flex: 1 auto;
+    }
+}
+
+.block__link {
+    display: none;
+
+    a {
+        margin: auto 0 auto auto;
+    }
+
+    @include min-screen(1024px) {
+        display: flex;
+        flex: 0 auto;
+    }
+}
+
+.b__cont {}
+
+.b__ft {
+    margin-top: 30px;
+}
+.block .block__title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}

@@ -1,0 +1,86 @@
+@import "../../styles/helpers/_helpers";
+@import "./burger/burger.scss";
+@import "./logo-m/logo-m";
+@import "./search-m-btn/search-m-btn";
+@import "./phone-m-btn/phone-m-btn";
+
+.hd-m {
+    display: none;
+    height: 58px;
+    padding-left: 18px;
+    padding-right: 18px;
+
+    border-bottom: 1px solid #D6D6D6;
+
+    @include min-screen(768px) {
+        padding-left: 27px;
+        padding-right: 27px;
+    }
+
+    @include max-screen(1023px) {
+        display: flex;
+    }
+
+    .dealer {
+        padding: 0;
+        margin: 0;
+
+        &:before {
+            display: none;
+        }
+    }
+}
+
+.hd-m__inner {
+    width: 100%;
+    z-index: 2;
+    // background-color: $color18;
+    transition: all 0.25s;
+    display: flex;
+    align-items: center;
+}
+
+.hd-m__cont {
+    display: flex;
+    align-items: center;
+    flex-grow: 1;
+    margin-right: 10px;
+}
+
+.hd-m__phone {
+    a {
+        width: 45px;
+        height: 45px;
+        // background-color: $color4;
+        text-indent: -999999px;
+        display: block;
+        position: relative;
+
+        &:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            margin: auto;
+            // @include svgsprite(phone-03);
+        }
+    }
+}
+
+.hd-m__search-m {
+    width: 45px;
+    height: 45px;
+    // background-color: $color17;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 0 0 auto;
+
+    span {
+        position: relative;
+        // @include svgsprite(search-02);
+    }
+}

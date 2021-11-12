@@ -1,0 +1,62 @@
+[
+  {
+    "title": "Секционные почтовые ящики",
+    "img": "optima.png",
+    "href": "#"
+  },
+  {
+    "title": "Индивидуальные почтовые ящики",
+    "img": "ind-post-box.png",
+    "href": "#"
+  },
+  {
+    "title": "Двери тамбурные металлические",
+    "img": "dveri-tamb-metal.png",
+    "href": "#"
+  },
+  {
+    "title": "Шкафы металлические для раздевалок",
+    "img": "shkaf-metal-razdev.png",
+    "href": "#"
+  },
+  {
+    "title": "Металлические урны для улицы",
+    "img": "optima-4-3.png",
+    "href": "#"
+  },
+  {
+    "title": "Загрузочные клапаны мусоропровода",
+    "img": "zagruz-klapan-musroprovod.png",
+    "href": "#"
+  },
+  {
+    "title": "Контейнеры для сбора спама и макулатуры",
+    "img": "container-for-spam.png",
+    "href": "#"
+  },
+  {
+    "title": "Информационные доски",
+    "img": "info-boars.png",
+    "href": "#"
+  },
+  {
+    "title": "Металлические ключницы",
+    "img": "met-kluch.png",
+    "href": "#"
+  },
+  {
+      "title": "Металлические совки для уборки улиц",
+      "img": "sovki-dlya-uborki.png",
+      "href": "#"
+    },
+  {
+      "title": "Металлические аптечки",
+      "img": "met-aptechki.png",
+      "href": "#"
+    },
+  {
+      "title": "Измельчители зерна и корма",
+      "img": "izmelch.png",
+      "href": "#"
+    }
+];

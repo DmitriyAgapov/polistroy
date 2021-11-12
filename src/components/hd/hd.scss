@@ -1,0 +1,63 @@
+@import "../../styles/helpers/_helpers";
+
+.hd {
+	border: 1px solid #D6D6D6;
+	overflow: hidden;
+
+	@include max-screen(1023px) {
+		display: none;
+	}
+
+	.favorites {
+		margin-top: 12px;
+	}
+}
+
+.hd__top {
+	.hd__container {
+		height: 57px;
+
+		&:after {
+			content: '';
+			position: absolute;
+			bottom: 0;
+			left: -15px;
+			right: -15px;
+			z-index: 1;
+			border-bottom: 1px solid #D6D6D6;
+		}
+	}
+}
+
+.hd__container {
+	display: flex;
+	align-items: center;
+	height: 105px;
+}
+
+.hd__phone {
+	margin-right: 52px;
+
+	a {
+		font-size: 20px;
+		color: #333333;
+		font-weight: 700;
+		border: none;
+	}
+}
+
+.hd__email {
+	a {
+		font-size: 16px;
+		color: #333333;
+		border: none;
+	}
+}
+
+.hd__order-call {
+	margin-right: 56px;
+}
+
+.hd__email {
+	flex: 1;
+}

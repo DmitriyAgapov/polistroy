@@ -1,0 +1,132 @@
+@import "../../styles/helpers/_helpers";
+
+.b-consult {
+    //background-image: url(../img/consult.png);
+    //background-position: -105px bottom;
+    //background-repeat: no-repeat;
+    .block__cont {
+        display: flex;
+    }
+    .block__hd {
+        margin-bottom: 20px;
+        @include min-screen(768px) {
+            margin-bottom: 30px;
+        }
+        @include min-screen(1024px) {
+            margin-bottom: 40px;
+        }
+        @include min-screen(1280px) {
+            //margin-bottom: 66px;
+        }
+    }
+    .block__image {
+        position: absolute;
+        width: 327px;
+        left: -135px;
+        bottom: -50px;
+        @include min-screen(768px) {
+            width: 300px;
+            bottom: -60px;
+            left: -120px;
+        }
+        @include min-screen(1024px) {
+            width: 437px;
+            bottom: -110px;
+        }
+        @include min-screen(1280px) {
+            width: 492px;
+            bottom: -110px;
+        }
+    }
+    .block__data {
+        margin-left: auto;
+        width: 151px;
+        @include min-screen(768px) {
+            width: 204px;
+            margin-right: 5px;
+        }
+        @include min-screen(1024px) {
+            margin-right: 25px;
+        }
+    }
+    .block__form.wf {
+        margin-top: 25px;
+    }
+    .block__row.form-item {
+        display: flex;
+        input {
+            margin-right: 8px;
+
+        }
+        @include max-screen(1023px) {
+            max-width: 211px;
+        }
+    }
+    .block__col_form {
+        flex: 1;
+        min-width: 402px;
+        @include max-screen(767px) {
+            display: none;
+        }
+
+    }
+    .form-item textarea {
+        min-height: 161px;
+        @include min-screen(768px) {
+            min-height: 123px;
+        }
+        @include min-screen(1024px) {
+            min-height: 161px;
+        }
+    }
+    .block__col_contact {
+        margin-top: 25px;
+        position: relative;
+        flex: 1;
+        @include max-screen(767px) {
+            max-width: 300px;
+            margin: auto;
+        }
+    }
+
+    .block__position {
+        margin-bottom: 8px;
+    }
+    .block__name {
+        font-size: 20px;
+        font-weight: 700;
+        color: #333333;
+        margin-bottom: -4px;
+        @include max-screen(1023px) {
+            font-size: 15px;
+            line-height: 28px;
+        }
+    }
+    .block__phone {
+        margin-bottom: 9px;
+        a {
+            font-weight: 700;
+            font-size: 26px;
+            border: none;
+            color: #333333;
+            @include max-screen(1023px) {
+                font-size: 18px;
+                line-height: 28px;
+                margin-bottom: 15px;
+            }
+        }
+    }
+    .block__email {
+        margin-bottom: 20px;
+        @include max-screen(1023px) {
+            margin-bottom: 15px;
+        }
+        a {
+            font-size: 20px;
+            border: none;
+            @include max-screen(1023px) {
+                font-size: 15px;
+            }
+        }
+    }
+}

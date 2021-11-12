@@ -1,0 +1,64 @@
+// catalog-item
++b.catalog-item
+    .container
+        +e.content
+            +e.header
+                +e.title
+                    h1 2-х секционный почтовый ящик серии ОРИОН ПРЕСТИЖ
+                +e.icon-bar
+                    +b.to-favorite
+                        include ../favorites/favorites
+                    +b.to-share
+                        include ../share/share
+                    +b.to-pdf
+                        include ../pdf/pdf
+                    +b.to-print
+                        include ../print/print
+            +e.image
+                include ../image/image
+                +e.labels
+                    .item__label.green Новинка
+                    .item__label.yellow Хит продаж
+                +b.to-favorite
+                    include ../favorites/favorites
+            +e.thumbs
+                .icon-3d
+                    include ../../img/icons-color/3d.svg
+                include ../image/thumbs
+            +e.description
+                table
+                    tr
+                        td Габариты:
+                        td 370 × 380 × 180 мм
+                    tr
+                        td Толщина стали:
+                        td 0,6 мм
+                    tr
+                        td Наличие замка:
+                        td есть
+                    tr
+                        td Кол-во ключей:
+                        td по 2 шт. для каждой секции
+            +e.price
+                span Рекомендуемая розничная цена:
+                +e.row
+                    +e.price-value 847
+                        span ₽
+                    A.btn.btn_link.btn_arrow-right(href="#") Купить в розницу
+                +b.btn-price.btn.btn_radius.btn_primary.BUTTON Узнать оптовую цену
+                    +e.btn-inline-text до -35%
+                +b.btn_more.btn_text-link.A(href="#") Уточнить наличие
+            +e.features
+                +b.item-features-product
+                    +e.link.A(href="#")
+                        +e.icon
+                            img(src="img/icons-color/ral.svg")
+                        +e.title Окрасим в любой цвет палитры RAL
+                +b.item-features-product
+                    +e.link.A(href="#")
+                        +e.icon
+                            img(src="img/icons-color/14days.svg")
+                        +e.title Изготовим за 14 дней
+
+
+// КОНЕЦ: catalog-item

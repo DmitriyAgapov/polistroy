@@ -1,0 +1,15 @@
+@import "../../styles/helpers/_helpers";
+
+.block-logo {
+    display: none;
+    @include max-screen(767px) {
+
+
+    display: flex;
+    .block-logo__content {
+        margin: auto;
+    }
+    .block-logo__subtext {
+        text-align: center;
+    } }
+}

@@ -1,0 +1,19 @@
+@import "../../../styles/helpers/_helpers";
+
+.search-m-btn__link {
+	width: 21px;
+	height: 21px;
+	//@debug: #4b5053;
+	cursor: pointer;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex: 0 0 auto;
+	border-bottom: none;
+
+	&:hover path {
+		stroke: $color-red;
+	}
+
+
+}

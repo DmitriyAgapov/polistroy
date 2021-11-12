@@ -1,0 +1,114 @@
+@import "../../styles/helpers/_helpers";
+
+.favorites {
+    a {
+        display: inline-flex;
+        //padding-left: 27px;
+        border: none;
+        text-decoration: none;
+        position: relative;
+        color: #84888b;
+
+            font-size: 0;
+
+
+        &:before {
+            content: '';
+            position: static;
+            top: 0;
+            left: 0;
+            @include svgsprite(fav-ico);
+        }
+        &:hover {
+            //color: $color2;
+            &:before {
+                content: '';
+                position: static;
+                top: 0;
+                left: 0;
+                @include svgsprite(fav-ico-red);
+            }
+        }
+    }
+    a.is-active {
+        //color: $color2;
+        &:before {
+            //@include svgsprite(star-small-3);
+        }
+    }
+}
+.favorites_go-page {
+    a {
+        padding: 0;
+        //color: $white;
+        &:before {
+            //@include svgsprite(star-big);
+        }
+        &:hover {
+            //color: $white;
+            &:before {
+                //@include svgsprite(star-big-3);
+            }
+        }
+        &.is-active {
+            &:before {
+                //@include svgsprite(star-big-3);
+            }
+        }
+    }
+    .favorites__text {
+        display: none;
+    }
+}
+//.favorites_go-page.favorites_mobile {
+//	a {
+//		//color: $color2;
+//		&:before {
+//			//@include svgsprite(star-4);
+//		}
+//		&.is-active {
+//			&:before {
+//				//@include svgsprite(star-big-3);
+//			}
+//		}
+//	}
+//}
+.favorites_node {
+    a {
+        //color: $color2;
+		padding: 0;
+		display: block;
+		width: 21px;
+		height: 20px;
+        text-indent: -999999px;
+        &:before {
+            //@include svgsprite(star-3);
+        }
+        &:hover {
+            &:before {
+                //@include svgsprite(star-3);
+            }
+        }
+    }
+    a.is-active {
+        &:before {
+            //@include svgsprite(star-big-3);
+        }
+    }
+}
+.favorites__count {
+    background-color: #D21818;
+    border-radius: 50%;
+    width: 19px;
+    height: 19px;
+    font-size: 13px;
+    font-weight: 700;
+    color: #ffffff;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    position: absolute;
+    top: -5px;
+    right: -4px;
+}

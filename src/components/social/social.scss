@@ -1,0 +1,33 @@
+@import "../../styles/helpers/_helpers";
+
+.social {
+    margin-top: 20px;
+}
+.social__label {
+    margin-bottom: 5px;
+}
+.social__list {
+    display: flex;
+    align-items: center;
+}
+.social__link {
+    display: flex;
+    text-indent: -999999px;
+    opacity: 0.8;
+    transition: all 0.2s ease-in-out;
+    margin-right: 22px;
+    border-bottom: initial;
+    &:hover {
+        opacity: 1;
+    }
+}
+.social__link_youtube {
+    @include svgsprite(youtube);
+}
+
+.social__link_insta {
+    @include svgsprite(insta);
+}
+.social__link_fb {
+    @include svgsprite(fb);
+}

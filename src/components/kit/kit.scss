@@ -1,0 +1,7 @@
+.buttons_layout {
+    display: grid;
+    //grid-template: auto/repeat(auto-fit, minmax(200px, 1fr));
+    grid-gap: 50px;
+    justify-items: left;
+    align-items: center;
+}

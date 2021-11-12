@@ -1,0 +1,25 @@
+@import "../../../styles/helpers/_helpers";
+
+.nv-m {
+    flex-grow: 1;
+}
+
+.nv-m__list {
+    margin: 0;
+    padding: 0;
+}
+
+.nv-m__item {
+    border-bottom: 1px solid #eaeaea;
+    margin: 0;
+
+    &:before {
+        display: none;
+    }
+
+    a {
+        display: block;
+        padding: 10px 10px;
+        text-align: center;
+    }
+}

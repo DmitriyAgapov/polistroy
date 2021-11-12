@@ -1,0 +1,19 @@
+@import "../../../styles/helpers/_helpers";
+
+.logo-m {
+    margin-right: 10px;
+    //height: 23px;
+}
+
+.logo-m__link {
+    text-indent: -999999px;
+    display: block;
+    //background: url(../../img/logo.svg) 0 0 no-repeat;
+    background-size: contain;
+    max-width: 188px;
+    //height: 23px;
+    border: none;
+    text-decoration: none;
+
+
+}

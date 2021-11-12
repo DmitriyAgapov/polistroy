@@ -1,0 +1,86 @@
+@import "../../styles/helpers/_helpers";
+
+.share {
+	> a {
+		border: none;
+		display: block;
+		span {
+			padding-left: 20px;
+			position: relative;
+			font-size: 0;
+			display: block;
+			text-indent: -999999px;
+			&:before {
+				content: '';
+				position: absolute;
+				top: 0;
+				left: 0;
+				@include svgsprite(share);
+			}
+		}
+	}
+	&:hover {
+		> a {
+			span {
+				&:before {
+					@include svgsprite(share-hover);
+				}
+			}
+		}
+		.share__cont {
+			opacity: 1;
+			visibility: visible;
+		}
+	}
+}
+.share__cont {
+	position: absolute;
+	top: 19px;
+	width: 165px;
+	left: 50%;
+	opacity: 0;
+	visibility: hidden;
+	transition: all 0.25s 0.1s;
+	padding-top: 13px;
+	z-index: 1;
+	transform: translateX(-50%);
+	ul {
+		li {
+			&:before {
+				display: none;
+			}
+		}
+	}
+}
+.share_theme-black {
+	> a {
+		color: #fff;
+		background-color: #5f656a;
+		padding: 10px 17px;
+		span {
+			padding-left: 29px;
+			text-indent: 0px;
+			&:before {
+				content: '';
+				position: absolute;
+				top: 0;
+				left: 0;
+				// @include svgsprite(share-2);
+			}
+		}
+	}
+	&:hover {
+		> a {
+			background-color: #6f7579;
+			color: white;
+			span {
+				&:before {
+					// @include svgsprite(share-2);
+				}
+			}
+		}
+	}
+	.share__cont {
+		top: 39px;
+	}
+}

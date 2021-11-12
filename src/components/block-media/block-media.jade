@@ -1,0 +1,18 @@
+// block-media
++b.block.block-media.bg-white.block-lg
+    .container
+        .block-inner
+            +e.content
+                +e.title
+                    h2 Фотогалерея
+                +e.gallery
+                    include ../gallery/gallery-about
+        .block-inner
+            +e.content
+                +e.title
+                    h2 Видео о заводе
+                +e.video
+                    //iframe(src='https://www.youtube.com/embed/7sbbb7Dt3D8' allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture' allowfullscreen='' width='320' height='200' frameborder='0')
+
+
+// КОНЕЦ: block-media

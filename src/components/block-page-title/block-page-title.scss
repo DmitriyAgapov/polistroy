@@ -1,0 +1,90 @@
+@import "../../styles/helpers/_helpers";
+
+.catalog-category .block-catalog-title {
+    background: url("../img/bg/catalog-category.jpg");
+}
+.about-page .block-catalog-title {
+    background: url("../img/bg/about.jpg");
+    @include min-screen(1280px) {
+        min-height: 447px;
+    }
+
+}
+.block-catalog-title {
+    background: url("../img/bg/catalog.jpg");
+    background-size: cover;
+    background-position: center center;
+    padding: 10px 0;
+    min-height: 207px;
+    max-height: 474px;
+    @include min-screen(768px) {
+        padding: 40px 0;
+    }
+    @include min-screen(1024px) {
+        padding: 40px 0;
+    }
+    @include min-screen(1280px) {
+        padding: 48px 0;
+    }
+    .bc {
+        a {
+            font-weight: 700;
+            color: #fff;
+            &:hover {
+                color: #AE2121;
+            }
+
+        }
+        .bc__sep {
+            @include svgsprite(arrowwhite);
+        }
+    }
+    h1 {
+        margin-top: 48px;
+        margin-bottom: 39px;
+        color: #fff;
+        font-weight: 700;
+        font-size: 28px;
+        line-height: 35px;
+        text-align: center;
+        @include min-screen(768px) {
+            margin-top: 72px;
+            margin-bottom: 31px;
+        }
+        @include min-screen(1024px) {
+            margin-top: 105px;
+            margin-bottom: 36px;
+            font-size: 56px;
+            line-height: 65px;
+        }
+        @include min-screen(1280px) {
+            margin-top: 126px;
+            margin-bottom: 34px;
+            font-size: 65px;
+            line-height: 65px;
+        }
+    }
+    p {
+        display: none;
+        color: #fff;
+        font-weight: 500;
+        font-size: 15px;
+        line-height: 20px;
+        text-align: center;
+        margin-top: 31px;
+        margin-bottom: 76px;
+        @include min-screen(768px) {
+            display: block;
+        }
+        @include min-screen(1024px) {
+            margin-top: 36px;
+            margin-bottom: 60px;
+            font-size: map-get($fontSize, normaPlusPlus);
+        }
+        @include min-screen(1280px) {
+            margin-top: 34px;
+            margin-bottom: 81px;
+            line-height: 28px;
+        }
+    }
+}

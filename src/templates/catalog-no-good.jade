@@ -1,0 +1,78 @@
+extends layout/default
+
+block variables
+    - const title = "Каталог без товаров";
+    - const description = '';
+    - const keywords = '';
+    - const pageClass = 'catalog';
+
+block styles
+    +style("http://code.jquery.com/ui/1.12.1/themes/smoothness/jquery-ui.css")
+    +style('https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/css/swiper.min.css')
+    //- +style('https://cdn.jsdelivr.net/npm/slick-carousel/slick/slick.min.css')
+    +style('https://cdn.jsdelivr.net/npm/lightgallery/dist/css/lightgallery.min.css')
+    +style('css/common.min.css')        // базовые стили
+    +style('css/hd.min.css')                  // шапка
+    +style('css/b.min.css')                  // Блоки и секции
+    +style('css/hd-m.min.css')                  // шапка Мобильная
+    +style('css/slogan.min.css')              // слоган
+    +style('css/linking-pages.min.css')         //перелинковка
+    +style('css/logo.min.css')                // логотип в шапке
+    +style('css/nv-main-menu.min.css')        // главное меню
+    +style('css/search.min.css')              // поиск в шапке
+    +style('css/favorites.min.css')           // избранное
+    +style('css/lightgallery.min.css')      // фотогаллерея
+    +style('css/slider.min.css')      // Слайдер главная main-top
+    +style('css/item-catalog-teaser1.min.css')      // Категории каталога main
+    +style('css/block-catalog.min.css') //Блок каталога главная
+    +style('css/block-features.min.css')      // Категории каталога main
+    +style('css/block-dealer.min.css')      // Категории каталога main
+    +style('css/block-about.min.css')      // Категории каталога main
+    +style('css/block-partners.min.css')
+    +style('css/arrows.min.css')
+    +style('css/bc.min.css')   //Хлебные крошки
+    +style('css/bc-m.min.css')   //Хлебные крошки
+    +style('css/ft.min.css')  // Футер
+    +style('css/social.min.css')
+    +style('css/block-page-title.min.css')
+    +style('css/b-promo.min.css')
+    +style('css/block-banner.min.css')
+    +style('css/block-choose.min.css')
+    +style('css/b-consult.min.css')
+    +style('css/main-content.min.css')
+
+block scripts
+    +script('https://cdn.jsdelivr.net/npm/jquery@1.11.0/dist/jquery.min.js')
+    +script('https://cdn.jsdelivr.net/npm/jquery-once@2.2.0/jquery.once.min.js')
+    +script("https://code.jquery.com/ui/1.11.4/jquery-ui.min.js")
+    +script('https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/js/swiper.min.js')
+    //- +script('https://cdn.jsdelivr.net/npm/slick-carousel/slick/slick.min.js')
+    +script('https://cdn.jsdelivr.net/npm/lightgallery/dist/js/lightgallery-all.min.js')
+    +script('https://cdn.jsdelivr.net/npm/inputmask/dist/min/jquery.inputmask.bundle.min.js')
+    +script('js/lightgallery.js')       // фотогаллерея
+    +script('js/theme.min.js')          // кастомный файл
+    +script('js/block-partners.min.js')
+    +script('js/b-promo.min.js')
+
+block content
+    +b.head.wrapper.bg-white
+        include ../components/hd/hd
+        include ../components/hd-m/hd-m
+        include ../components/hd-m/search-m-panel/search-m-panel
+        include ../components/hd-m/menu-m-panel/menu-m-panel
+    +b.region-top
+        include ../components/block-page-title/catalog
+    +b.region-main
+        include ../components/main-content/main-content
+        //include ../components/block-link-price/block-link-price
+        include ../components/block-banner/block-banner
+        include ../components/block-features/block-features
+
+        //include ../components/block-dealer/block-dealer
+        //include ../components/block-about/about
+        include ../components/block-choose/block-choose
+        .bg-gray
+            .container
+                include ../components/b-consult/b-consult
+    +b.region-footer
+        include ../components/ft/ft

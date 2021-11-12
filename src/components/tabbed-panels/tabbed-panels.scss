@@ -1,0 +1,193 @@
+@import "../../styles/helpers/_helpers";
+
+.tabbed-panels {
+    @include max-screen(7667px) {
+        margin: 0;
+    }
+
+
+    .tabbed-panels__links {
+        display: block;
+    }
+    .tabbed-panels__link {
+        margin-right: 54px;
+        border-bottom: 0;
+        cursor: pointer;
+        color: $color-grey-dark;
+        font-size: map-get($fontSize, normaPlusPlus);
+        font-weight: 500;
+        line-height: 28px;
+        position: relative;
+        z-index: 2;
+        &.active {
+            border-bottom: 2px solid $color-grey-dark;
+        }
+
+        padding: 0 0 12px;
+        &:last-child {
+            margin-right: 0;
+        }
+    }
+    .tabbed-panels__block {
+        display: none;
+        background: #fff;
+        padding: 30px 0;
+        @include min-screen(768px) {
+            padding: 45px;
+        }
+
+        &.active {
+            display: block;
+        }
+
+        &  *:first-child {
+            margin-top: 0;
+        }
+        &  *:last-child {
+            margin-bottom: 0;
+        }
+    }
+    .tabbed-inner {
+        display: flex;
+        flex-wrap: wrap; // make sure it wraps
+        @include max-screen(767px) {
+            padding: 0 18px;
+            background: #fff;
+        }
+
+    }
+    .tabbed-inner label {
+        &:before {
+            display: none;
+        }
+        position: relative;
+        order: 1; // Put the labels first
+        display: block;
+        transition: background ease 0.2s;
+        margin-right: 54px;
+        @include max-screen(767px) {
+            border-bottom: 1px solid #D6D6D6;
+            color: #616161;
+
+        }
+        &:last-of-type {
+            @include max-screen(767px) {
+                border-bottom: 0px solid #D6D6D6;
+            }
+        }
+
+        cursor: pointer;
+        color: $color-grey-dark;
+        @include min-screen(768px) {
+            font-size: map-get($fontSize, normaPlus);
+            color: $color-grey-dark;
+        }
+        font-size: map-get($fontSizemax1023, normaPlusPlus);
+        font-weight: 500;
+        line-height: 28px;
+
+        z-index: 2;
+
+        padding: 0 0 12px;
+        &:last-child {
+            margin-right: 0;
+        }
+
+        &:after {
+            content: '';
+            position: absolute;
+            @include svgsprite(arrow-down);
+            right: 18px;
+            top: 28px;
+            left: initial;
+            bottom: 28px;
+            display: none;
+        }
+        @include max-screen(767px) {
+            padding: 17px 0 18px;
+            &:after {
+                display: block;
+            }
+        }
+    }
+    .tabbed-inner .tabbed-panels__block {
+        order: 99; // Put the tabs last
+        flex-grow: 1;
+        width: 100%;
+        display: none;
+        background: #fff;
+        & > *:first-child {
+            margin-top: 0;
+        }
+        & > *:last-child {
+            margin-bottom: 0;
+        }
+    }
+    .tabbed-inner input[type="checkbox"], .tabbed-inner input[type="radio"] {
+        display: none;
+
+    }
+    .tabbed-inner input[type="checkbox"]:checked + label, .tabbed-inner input[type="radio"]:checked + label {
+        &:last-of-type {
+            @include max-screen(767px) {
+                border-bottom: 1px solid #D6D6D6;
+            }
+        }
+
+
+        @include min-screen(768px) {
+            border-bottom: 2px solid $color-grey-dark;
+        }
+        &:after {
+
+            top: 28px;
+            left: initial;
+            transform: rotate(180deg);
+        }
+    }
+    .tabbed-inner input[type="checkbox"]:checked + label + .tabbed-panels__block, .tabbed-inner input[type="radio"]:checked + label + .tabbed-panels__block {
+        display: block;
+    }
+    .tabbed-panels__items {
+        a {
+            padding: 0;
+            @include max-screen(1023px) {
+                font-size: 13px;
+            }
+
+        }
+        .btn:before {
+           transform: scale(0.75);
+        }
+        @include min-screen(768px) {
+            display: flex;
+            justify-content: space-between;
+
+        }
+    }
+    .tabbed-panels__row {
+        @include min-screen(768px) {
+            display: flex;
+            justify-content: space-between;
+        }
+
+    }
+    iframe {
+        width: 100%;
+        height: 45vw;
+        @include min-screen(1280px) {
+            height: 35vw;
+        }
+    }
+    @include max-screen(767px){
+        .tabbed-inner .tabbed-panels__block,
+        .tabbed-inner label {
+            order: initial;
+        }
+        .tabbed-inner label {
+            width: 100%;
+            margin-right: 0;
+
+        }
+    }
+}

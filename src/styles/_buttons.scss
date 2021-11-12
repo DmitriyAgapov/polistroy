@@ -1,0 +1,318 @@
+button {
+    font-family: Gilroy;
+    outline: 0;
+
+    &:focus {
+        outline: none;
+    }
+}
+
+.btn {
+    cursor: pointer;
+    text-align: center;
+    display: inline-flex;
+    position: relative;
+    padding: 17px 50px 18px;
+    font-family: Gilroy;
+    line-height: 1;
+
+}
+
+.btn_secondary {
+    border: 1px solid #d21818;
+    transition: all 0.25s ease-in-out;
+    text-decoration: none;
+    //background-color: #ffffff;
+    color: #d21818;
+
+    &:hover {
+        border: 1px solid #ed4545;
+        background-color: #ed4545;
+        color: #fff;
+        text-decoration: none;
+    }
+
+    &:focus {
+        border: 1px solid #ed4545;
+        background-color: #ed4545;
+        color: #fff;
+        text-decoration: none;
+    }
+}
+
+.btn_primary {
+    border-width: 0px;
+    border-style: solid;
+    transition: all 0.25s ease-in-out;
+    text-decoration: none;
+    background-color: $color-red-dark;
+    color: #fff;
+    font-weight: 700;
+
+    &:hover {
+        text-decoration: none;
+        background-color: #730202;
+        color: #fff;
+    }
+
+    &:focus {
+        text-decoration: none;
+    }
+}
+
+.btn_link {
+    background: none;
+    border: none;
+    //border-bottom: 1px solid;
+    font-weight: 400;
+    padding: 0;
+
+    max-width: max-content;
+    &:hover {
+        text-decoration: none;
+        color: inherit;
+    }
+}
+
+.btn_outline {}
+
+.btn_download {
+    border: none;
+    font-weight: 600;
+    position: relative;
+    padding-left: 42px;
+    padding-top: 8px;
+    line-height: 30px;
+
+    &::before {
+        content: '';
+        @include svgsprite('download');
+        position: relative;
+        top: 2px;
+        left: 0;
+        width: 25px;
+        height: 29px;
+        margin-right: 14px;
+    }
+
+    span {
+        border-bottom: 1px solid;
+    }
+}
+.btn_pdf-list {
+    border: none;
+    font-weight: 500;
+    font-size: 16px;
+    position: relative;
+    //padding-left: 42px;
+    //padding-top: 8px;
+
+
+
+
+    color: $color-red;
+
+    line-height: 24px;
+    display: flex;
+    align-items: center;
+    &::before {
+        content: '';
+        @include svgsprite('pdf-list');
+        position: relative;
+        top: 2px;
+
+        margin-right: 15px;
+    }
+
+    span {
+        //border-bottom: 1px solid;
+        max-width: 280px;
+        display: block;
+        margin: auto;
+        color: #ED4545;
+        text-align: left;
+    }
+}
+// КНОПКА В ВЕРХНЕМ РЕГИСТРЕ
+.btn_upper {
+    text-transform: uppercase;
+}
+
+// КНОПКИ БЛОЧНОГО УРОВНЯ – КОТОРЫЕ ЗАНИМАЮТ ПОЛНУЮ ШИРИНУ РОДИТЕЛЬСКОГО ЭЛЕМЕНТА.
+.btn_block {
+    display: block;
+    width: 100%;
+}
+
+// ДЛЯ ПОЛУЧЕНИЯ ДОПОЛНИТЕЛЬНЫХ РАЗМЕРОВ
+.btn_lg {
+    font-size: 15px;
+    padding: 20px 35px 19px;
+    @include min-screen(768px) {
+        padding: 24px 78px;
+        font-size: 1.25rem;
+    }
+}
+
+.btn_sm {
+    padding: 9px 16px;
+}
+
+// ЗАКРУГЛЕННЫЕ КРАЯ
+.btn_radius {
+    border-radius: 3px;
+}
+
+.btn_radius-lg {
+    border-radius: 5px;
+}
+
+.btn_icon-text {
+    font-weight: 500;
+    color: $color-grey-light;
+    line-height: 1.75;
+
+    span {
+        display: block;
+        line-height: 1.75;
+
+        height: 22px;
+        border-bottom: 1px solid $color-grey-light;
+    }
+
+    &:hover {
+        color: $color-red;
+
+        span {
+
+            border-bottom: 0px solid $color-grey-light;
+        }
+    }
+
+    svg {
+        margin-right: 10px;
+        border-bottom: none;
+    }
+}
+
+.btn_icon {
+    color: initial;
+    text-decoration: none;
+    border-bottom: none;
+    outline: 0;
+}
+
+.btn_icon g,
+.btn_icon path,
+    {
+    //fill: $color-grey-light;
+}
+
+.btn_icon:hover g,
+.btn_icon:hover path {
+    //fill: $color-red;
+}
+.btn-
+.btn_test {
+    &::after {
+        background: center / 24px 24px no-repeat; // Shorthand for: background-position, background-size, background-repeat
+        border-radius: 100em;
+        bottom: 0;
+        content: '';
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: 48px;
+    }
+
+    &::after {
+        background-image: url('data:image/svg+xml;utf-8,<svg xmlns="http://www.w3.org/2000/svg" width="30.544" height="25.294" viewBox="0 0 30.544 25.294"><g transform="translate(-991.366 -1287.5)"><path d="M1454.5,1298.922l6.881,6.881-6.881,6.881" transform="translate(2312.404 -157.556) rotate(90)" fill="none" stroke="%23fff" stroke-width="3"/><path d="M8853.866,5633.57v9.724h27.544v-9.724" transform="translate(-7861 -4332)" fill="none" stroke="%23fff" stroke-linejoin="round" stroke-width="3"/><line y2="14" transform="translate(1006.5 1287.5)" fill="none" stroke="%23fff" stroke-width="3"/></g></svg>');
+    }
+
+}
+
+
+// РАСПОЛОЖЕНИЕ ИКОНКИ В КНОПКЕ (СЛЕВА ИЛИ СПРАВА)
+.btn_icon-left {
+    padding-left: 54px;
+
+    &:before {
+        position: relative;
+        top: 1px;
+        bottom: 0;
+        left: 18px;
+        display: flex;
+        align-items: center;
+    }
+}
+
+.btn_icon-right {
+    padding-right: 54px;
+
+    &:before {
+        position: relative;
+        top: 1px;
+        bottom: 0;
+        right: 18px;
+        display: flex;
+        align-items: center;
+    }
+}
+
+.btn_arrow-left {
+
+
+    &:hover {
+        &:before {
+            margin-right: 38px;
+            margin-left: 0;
+        }
+    }
+
+    &:before {
+        position: relative;
+        content: '';
+        @include svgsprite(arrow-left);
+        top: 1px;
+
+        bottom: 0;
+        margin-right: 20px;
+        margin-left: 18px;
+        display: flex;
+        align-items: center;
+    }
+}
+
+.btn_arrow-right {
+    flex-flow: row-reverse;
+
+    &:hover {
+        &:before {
+            margin-left: 38px;
+            margin-right: 0;
+        }
+    }
+
+    &:before {
+        position: relative;
+        content: '';
+        @include svgsprite(arrow-right);
+        top: 1px;
+        bottom: 0;
+        margin-left: 20px;
+        margin-right: 18px;
+        display: flex;
+        align-items: center;
+
+    }
+}
+.btn_text-link {
+    font-weight: 500;
+    padding: 0;
+    font-size: 16px;
+    color: $color-red;
+    border-bottom: 1px dashed $color-red;
+    span {
+        display: none;
+    }
+}

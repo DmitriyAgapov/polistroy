@@ -1,0 +1,36 @@
+// b + b-consult (css)
++b.block.b-consult.padding
+            +e.hd
+                +e.H2.title Требуется консультация специалиста?
+            +e.cont
+                +e.col_contact
+                    +e.image
+                        IMG(src="../img/consult.png")
+                    +e.data
+                        +e.name Анастасия
+                        +e.position Менеджер по продажам
+                        +e.phone
+                            a(href="tel:+73512207658") 8 (351) 220-76-58
+                        +e.email
+                            a(href="mailto:sales@polistroy74.ru") sales@polistroy74.ru
+                        +e.time
+                            | Режим работы
+                            br
+                            | ПН-ПТ
+                            strong  9:00—18:00
+                +e.col_form
+                    +e.FORM.form.wf
+                        //+e.upload.form-item.wf__upload
+                        //    input(type="file", placeholder="Загрузите фотографии")
+                        //+e.attention.form-item
+                        //    //.attention__icon
+                        //    //.attention__text Прикрепите одну или несколько фотографий
+                        //    //include ../attention/attention-photos
+                        +e.used.form-item
+                            textarea(placeholder="Задайте вопрос*", name="used")
+                        +e.row.form-item
+                            //label(for="phone") Ваш телефон:
+                            input#phone_and_mail(type="text", placeholder="Телефон или Email*", name="phone_mail")
+                            +e.submit.wf__submit
+                                button(class="btn btn_primary btn_radius") Отправить
+// КОНЕЦ: b-consult

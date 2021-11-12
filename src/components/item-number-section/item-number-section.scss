@@ -1,0 +1,23 @@
+@import "../../styles/helpers/_helpers";
+
+.item-number-section {
+    display: block;
+    padding: 14px 14px 16px;
+    background: #fff;
+    text-align: center;
+    font-size: 15px;
+    color: $color-grey-dark;
+    line-height: 22px;
+    font-weight: 700;
+    outline: 1px solid #D6D6D6;
+    border-bottom: 0;
+    @include min-screen(1024px) {
+        font-size: 20px;
+        line-height: 28px;
+    }
+}
+.item-number-section:hover, .item-number-section:active {
+    background: #ae2121;
+    color: #fff;
+    outline: 1px solid #D6D6D6;
+}

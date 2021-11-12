@@ -1,0 +1,18 @@
+
+.item__label {
+
+  padding: 11px 25px 11px 27px;
+  font-size: 15px;
+  line-height: 15px;
+  max-width: max-content;
+
+  color: #fff;
+  font-weight: 700;
+
+  &.green {
+    background: #27AE60;
+}
+  &.yellow {
+    background-color: #F0C021;
+}
+}
