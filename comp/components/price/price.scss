@@ -1,0 +1,29 @@
+@import "../../styles/helpers/_helpers";
+
+.price {
+    display: flex;
+    line-height: 1;
+}
+.price__value {
+    display: flex;
+}
+.price_current {
+    font-weight: 700;
+    font-size: 22px;
+}
+.price_new {
+    font-weight: 700;
+    font-size: 22px;
+}
+.price_spec {
+    font-weight: 700;
+    font-size: 22px;
+    color: #f53232;
+}
+.price_old {
+    margin-bottom: 7px;
+    .price__value {
+        text-decoration: line-through;
+        color: rgba(34, 35, 37, 0.5);
+    }
+}

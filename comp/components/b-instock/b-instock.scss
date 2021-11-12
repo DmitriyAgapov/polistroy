@@ -1,0 +1,103 @@
+@import "../../../styles/helpers/helpers";
+
+.b-instock {
+    margin-left: -2000px !important;
+    margin-right: -2000px !important;
+    padding-left: 2000px !important;
+    padding-right: 2000px !important;
+    .item {
+        flex: 0 0 auto;
+        width: 293px;
+        padding-right: 2px;
+        @include max-screen(1199px) {
+            width: 324px;
+        }
+        @include max-screen(1019px) {
+            width: 308px;
+        }
+    }
+    .item__link {
+        box-shadow: none !important;
+    }
+    .arrows {
+        z-index: 4;
+        @include max-screen(991px) {
+            display: none;
+        }
+    }
+    .arrows__prev {
+        left: -17px;
+    }
+    .arrows__next {
+        right: -17px;
+    }
+    .b__shadow {
+        position: absolute;
+        z-index: 4;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        width: 292px;
+        transition: opacity 0.25s ease-in-out, visibility 0.25s ease-in-out;
+        box-shadow: 0 6px 25px 0 rgba(0, 0, 0, 0.2);
+        opacity: 0;
+        visibility: hidden;
+        @include max-screen(991px) {
+            display: none;
+        }
+        &.active {
+            opacity: 1;
+            visibility: visible;
+        }
+    }
+    .b__hd {
+        .btn {
+            @include max-screen(767px) {
+                display: none;
+            }
+        }
+    }
+    .b__cont {
+        @include screen(992px, 1019px) {
+            margin-left: 25px;
+            margin-right: 25px;
+        }
+        @include max-screen(767px) {
+            margin-left: -15px;
+            margin-right: -15px;
+        }
+    }
+    .b__list {
+        @include max-screen(767px) {
+            padding-right: 70px;
+        }
+        z-index: 3;
+        overflow: hidden;
+    }
+    .b__list-inner {
+        display: flex;
+    }
+    .b__ft {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        .btn {
+            display: none;
+            margin-top: 30px;
+            @include max-screen(767px) {
+                display: block;
+            }
+        }
+    }
+    .b__dots {
+        display: block !important;
+        white-space: nowrap;
+        overflow: hidden;
+        .dots__dot {
+            display: inline-block;
+            position: relative;
+            transition: 0.2s transform, 0.2s left;
+            vertical-align: top;
+        }
+    }
+}

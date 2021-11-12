@@ -1,0 +1,22 @@
+// item + item-news + item-news-[вид отображения] (css)
++b.item.item-news.item-news-[вид отображения]
+    +e.link.A(href="#")
+        +e.image
+            img(src="URL_IMG", alt="")
+        +e.info
+            +e.name НАЗВАНИЕ
+            +e.date ДАТА
+            +e.body ОПИСАНИЕ (МОЖЕТ СОДЕРЖАТЬ ТЕГИ "P")
+// КОНЕЦ: item + item-news + item-news-[вид отображения] (css)
+
+// item + item-news + item-news-[вид отображения] (css)
++b.item.item-news.item-news-[вид отображения]
+    +e.image
+        a(href="#")
+            img(src="URL_IMG", alt="")
+    +e.info
+        +e.date ДАТА
+        +e.name
+            +e.link.A(href="#") НАЗВАНИЕ
+        +e.body ОПИСАНИЕ (МОЖЕТ СОДЕРЖАТЬ ТЕГИ "P")
+// КОНЕЦ: item + item-news + item-news-[вид отображения] (css)

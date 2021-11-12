@@ -1,0 +1,80 @@
+@import "../../styles/helpers/_helpers";
+
+.b-shipment {
+    .arrows {
+        z-index: 4;
+        @include max-screen(991px) {
+            display: none;
+        }
+    }
+    .arrows__prev {
+        left: -17px;
+    }
+    .arrows__next {
+        right: -17px;
+    }
+    .item {
+        margin: 0 1px;
+    }
+    .b__hd {
+        .btn {
+            @include max-screen(767px) {
+                display: none;
+            }
+        }
+    }
+    .b__cont {
+        @include max-screen(767px) {
+            margin-left: -15px;
+            margin-right: -15px;
+        }
+    }
+    .b__list {
+        overflow: hidden;
+        @include max-screen(991px) {
+            padding-right: 70px;
+        }
+        &:not(.swiper-container-initialized) {
+            .item {
+                @include min-screen(1200px) {
+                    width: 290px;
+                }
+                @include screen(992px, 1199px) {
+                    width: 240px;
+                }
+                @include screen(768px, 991px) {
+                    width: 338px;
+                }
+            }
+        }
+    }
+    .b__list-inner {
+        display: flex;
+    }
+    .b__ft {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        .btn {
+            display: none;
+            margin-top: 30px;
+            @include max-screen(767px) {
+                display: block;
+            }
+        }
+        &.disabled {
+            display: none;
+        }
+    }
+    .b__dots {
+        display: block !important;
+        white-space: nowrap;
+        overflow: hidden;
+        .dots__dot {
+            display: inline-block;
+            position: relative;
+            transition: 0.2s transform, 0.2s left;
+            vertical-align: top;
+        }
+    }
+}

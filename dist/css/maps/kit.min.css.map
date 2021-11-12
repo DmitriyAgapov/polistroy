@@ -1,0 +1,1 @@
+{"version":3,"sources":["kit/kit.scss"],"names":[],"mappings":"AAAA,gBACI,QAAA,SAAA,QAAA,KAEA,SAAA,KACA,cAAA,KACA,kBAAA,OAAA,eAAA,OAAA,YAAA","file":"../kit.min.css","sourcesContent":[".buttons_layout {\r\n    display: grid;\r\n    //grid-template: auto/repeat(auto-fit, minmax(200px, 1fr));\r\n    grid-gap: 50px;\r\n    justify-items: left;\r\n    align-items: center;\r\n}"]}

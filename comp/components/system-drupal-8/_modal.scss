@@ -1,0 +1,166 @@
+$uiDialogTitleBarHeight: 50px;
+
+$uiDialogCloseBackgroundColor: transparent;
+$uiDialogClosePositionTop: 0;
+$uiDialogClosePositionRight: 0;
+$uiDialogCloseWidth: 50px;
+$uiDialogCloseHeight: 50px;
+$uiDialogCloseIcoSize: 20px;
+$uiDialogCloseIcoWeight: 2px;
+$uiDialogCloseIcoColor: gray;
+$uiDialogCloseIcoColorHover: lightgray;
+
+.ui-widget-overlay {
+    background-color: $overlayBackgroundColor;
+    background-image: none;
+    opacity: 1;
+}
+.ui-dialog-wrapper {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+.ui-dialog {
+    position: fixed !important;
+    top: auto !important;
+    left: auto !important;
+    z-index: 1000;
+    padding: 0;
+    border: none !important;
+    background: #fff;
+    border-radius: 0;
+    box-sizing: border-box;
+    font-size: inherit;
+    font-family: inherit;
+    // transform: translateX(-50%) translateY(calc(-50% - .5px)) translateZ(0);
+    // transform: translateX(-50.09%) translateY(calc(-50.09% - .5px)) translateZ(0);
+    // backface-visibility: hidden;
+    @include max-screen(991px) {
+        width: 100% !important;
+        height: 100% !important;
+        max-height: 100%;
+        overflow: auto;
+    }
+}
+// ХАК ДЛЯ INTERNET EXPLORER/EDGE ≥ 10
+_:-ms-input-placeholder, :root .ui-dialog {
+    transform: translateY(-50%) translateX(-50%)
+}
+.ui-dialog-titlebar {
+    position: static !important;
+    background: transparent !important;
+    border-radius: 0 !important;
+    border: none !important;
+    padding: 37px 46px 0 !important;
+    padding: 0 !important;
+    margin-bottom: 11px;
+    @include max-screen(991px) {margin-bottom: 8px;}
+}
+.ui-dialog-title {
+    // color: $color8;
+    // font-family: $font;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 30px;
+    width: 100% !important;
+    margin: 0 !important;
+    text-transform: uppercase;
+    text-overflow: initial !important;
+    white-space: normal !important;
+    // @include max-screen(991px) {font-size: 20px; line-height: 30px !important;}
+}
+@supports (-webkit-appearance:none) {
+    .ui-dialog-titlebar-close:before {
+        top: 1px !important;
+        left: 1px !important;
+    }
+}
+.ui-dialog-titlebar-close {
+    background-color: transparent !important;
+    background-image: none !important;
+    border: none !important;
+    border-radius: 0 !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    outline: none !important;
+    top: 10px !important;
+    right: 10px !important;
+    width: 32px !important;
+    height: 32px !important;
+    span {display: none;}
+    // @include max-screen(991px) {top: 11px !important; right: 20px !important;}
+    &::before,
+    &::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background-color: $uiDialogCloseIcoColor;
+        height: $uiDialogCloseIcoWeight;
+        width: $uiDialogCloseIcoSize;
+        margin: auto;
+        transition: all 0.3s;
+    }
+    &::before {
+        transform: rotate(45deg);
+    }
+    &::after {
+        transform: rotate(-45deg);
+    }
+    &:hover {
+        &::before,
+        &::after {
+            background-color: transparent;
+        }
+    }
+}
+.ui-dialog-content {
+    padding: 0 0 1px !important;
+    overflow: visible !important;
+    .wf__action {display: none;}
+}
+.ui-dialog-buttonpane {
+    margin: 0 !important;
+    border: none !important;
+    padding: 0 !important;
+    .ui-dialog-buttonset {
+        float: none !important;
+        @include max-screen(991px) {margin-bottom: 26px;}
+        button {
+            outline: none !important;
+            width: 100%;
+            text-align: center;
+            font-family: $font;
+            font-size: $normaPlus;
+            font-weight: 700;
+            line-height: 23px;
+            position: relative;
+            display: inline-block;
+            letter-spacing: 0.2px;
+            border-radius: 0;
+            padding: 18px 18px 17px;
+            background-color: #000;
+            background-image: none;
+            color: white;
+            transition: all 0.25s ease-in-out;
+            border: 1px solid #000;
+            margin: 0;
+            &:hover {
+                // color: $white;
+                // background-color: #3976b7;
+            }
+            &:focus {
+                // color: $white;
+                // background-color: $colorLink;
+            }
+        }
+    }
+}

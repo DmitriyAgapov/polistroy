@@ -1,0 +1,14 @@
+@import "../../styles/helpers/_helpers";
+
+.mark {
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    height: 68px;
+    img {
+        max-width: none;
+        height: auto;
+        display: block;
+    }
+}

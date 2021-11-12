@@ -1,0 +1,17 @@
+@import "../../styles/helpers/_helpers";
+
+.pdf {
+    @include max-screen(991px) {
+        display: none;
+    }
+    a {
+        display: inline-block;
+        padding-left: 30px;
+        &::before {
+            content: '';
+            position: absolute;
+            top: -2px;
+            left: 0px;
+        }
+    }
+}

@@ -1,0 +1,52 @@
+@import "../../styles/helpers/_helpers";
+
+.b-shipment-page {
+    .item {
+        padding-right: 2px;
+        padding-bottom: 2px;
+        @include min-screen(1200px) {
+            width: 292px;
+        }
+        @include screen(992px, 1199px) {
+            width: 242px;
+        }
+        @include screen(768px, 991px) {
+            width: 250px;
+        }
+        @include screen(480px, 767px) {
+            width: 50%;
+        }
+        @include max-screen(479px) {
+            width: 100%;
+            padding-right: 0;
+        }
+    }
+    .item__image {
+        @include min-screen(1200px) {
+            height: 214px;
+        }
+        @include screen(992px, 1199px) {
+            height: 177px;
+        }
+        @include screen(768px, 991px) {
+            height: 183px;
+        }
+        @include screen(480px, 767px) {
+            height: calc(35.3vw - 5px);
+        }
+        @include max-screen(479px) {
+            height: 73.7vw;
+        }
+    }
+    .b__cont {
+        display: flex;
+        flex-flow: row wrap;
+        @include max-screen(479px) {
+            margin-left: -15px;
+            margin-right: -15px;
+        }
+        img {
+            width: 100%;
+        }
+    }
+}

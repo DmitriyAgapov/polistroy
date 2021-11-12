@@ -1,0 +1,10 @@
+@import "../../../styles/helpers/helpers";
+
+.b-news-page {
+    .b__cont {
+        @include max-screen(767px) {
+            margin-left: -15px;
+            margin-right: -15px;
+        }
+    }
+}

@@ -1,0 +1,40 @@
+@import "../../styles/helpers/_helpers";
+
+.user-login-form,
+.user-pass {
+    max-width: 500px;
+    margin: 0 0 80px;
+    .form-item {
+        margin-bottom: 6px;
+    }
+    .description,
+    label {
+        display: none;
+    }
+    input[type='text'],
+    input[type='password'],
+    input[type='number'],
+    input[type='email'] {
+        // font-family: 'segoeui';
+        // border: 1px solid #ededee;
+        // background-color: #ffffff;
+        // color: #4d4d4d;
+        // font-size: 14px;
+        // line-height: 20px;
+        // width: 100%;
+        // padding: 9px 12px 9px;
+        // box-sizing: border-box;
+    }
+    .form-submit {
+        // background-color: red;
+        // color: #fff;
+        padding: 13px 32px 14px;
+        border: 1px solid transparent;
+        transition: all 0.25s ease-in-out;
+        font-weight: 600;
+        &:hover {
+            // background-color: #005791;
+            // color: #fff;
+        }
+    }
+}

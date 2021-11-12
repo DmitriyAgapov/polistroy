@@ -1,0 +1,18 @@
+#toolbar-administration {
+    nav {
+        height: auto !important;
+        line-height: inherit !important;
+        box-shadow: none;
+        nav {
+            background-color: transparent !important;
+        }
+    }
+    .toolbar-tab {
+        position: initial !important;
+    }
+    li {
+        &:before {
+            display: none;
+        }
+    }
+}

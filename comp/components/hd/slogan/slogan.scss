@@ -1,0 +1,13 @@
+@import "../../../styles/helpers/_helpers";
+
+.slogan {
+	color: #005693;
+	font-size: 13px;
+	font-weight: 700;
+	line-height: 15px;
+	letter-spacing: 1.11px;
+	position: absolute;
+	top: 18px;
+	left: 78px;
+	@include max-screen(1199px) {font-size: 11px; top: 11px; left: 58px;}
+}

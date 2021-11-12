@@ -1,0 +1,19 @@
+@import "../../styles/helpers/_helpers";
+
+.dealer {
+    width: 103px;
+    // color: $color2;
+    // font-size: $normaMinus;
+    line-height: 15px;
+    padding-top: 21px;
+    margin-right: 82px;
+	@include max-screen(1199px) {margin-right: 30px;}
+	@include max-screen(359px) {font-size: 11px; width: 88px;}
+    &:before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        // @include svgsprite(logo-ural);
+    }
+}

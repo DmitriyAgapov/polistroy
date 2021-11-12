@@ -1,0 +1,1 @@
+{"version":3,"sources":["hd/slogan/slogan.scss"],"names":[],"mappings":"AAEA,QACC,UAAA,KACA,YAAA,KACA,MAAA,MACA,cAAA,KACA,aAAA","file":"../slogan.min.css","sourcesContent":["@import \"../../../styles/helpers/_helpers\";\r\n\r\n.slogan {\r\n\tfont-size: 12px;\r\n\tline-height: 14px;\r\n\twidth: 230px;\r\n\tpadding-right: 30px;\r\n\tmargin-right: 110px;\r\n}"]}

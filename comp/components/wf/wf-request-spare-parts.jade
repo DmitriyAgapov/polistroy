@@ -1,0 +1,49 @@
+// wf (css)
+form.webform-submission-form
+    .form-item.form-item-markup
+        p Если у вас уже есть готовая заявка на запасные части, то просто прикрепите файл с ней либо в поле «Комментарии» напишите артикулы и названия необходимых вам запчастей и оставьте контактные данные.
+        p
+            strong В течение рабочего дня мы выполним расчёт по вашей заявке и направим вам коммерческое предложение.
+    .form-item.form-item-upload
+        // загрузка изображения
+        .form-managed-file
+            input#edit-file-upload.form-file(name="files[file]", size="22", type="file")
+        .description
+            | Только один файл.
+            br
+            | Ограничение 128 МБ.
+            br
+            | Допустимые типы: gif jpg png.
+
+        // прикрепленное изображение
+        .form-managed-file
+            span.file.file--image
+                a(href="http://urcyamz/system/files/webform/opredelit_zapchast/_sid_/01_3.png", type="image/png; length=40924") название_картинки.png
+            .form-action
+                input.button.form-submit(type="submit", name="file_custom_composite_items_1_file_remove_button", value="Удалить")
+        .description
+            | Только один файл.
+            br
+            | Ограничение 128 МБ.
+            br
+            | Допустимые типы: gif jpg png.
+    .webform-flexbox
+        .webform-flex.webform-flex--1
+            .webform-flex--container
+                .form-item
+                    textarea.form-textarea(name='comment' rows='3' cols='60' placeholder='Комментарий')
+        .webform-flex.webform-flex--2
+            .webform-flex--container
+                div
+                    .form-item
+                        input.form-text.required(type='text' name='phone' value='' size='60' maxlength='255' placeholder='Телефон*' required='required' aria-required='true' im-insert='true')
+                    .form-item
+                        input.form-text.required(type='text' name='email' value='' size='60' maxlength='255' placeholder='E-mail*' required='required' aria-required='true' im-insert='true')
+    .form-item
+        p.privacy-policy
+            | Отправляя форму вы подтверждаете согласие с
+            a(target='_blank' href='/privacy-policy')  политикой обработки персональных данных
+            | .
+    .form-actions
+        +btn('primary', 'Отправить заявку', '_size-2')
+// КОНЕЦ: wf (css)

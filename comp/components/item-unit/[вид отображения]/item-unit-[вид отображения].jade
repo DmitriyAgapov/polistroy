@@ -1,0 +1,67 @@
+// item + item-unit + item-unit-[вид отображения] (css)
++b.item.item-unit.item-unit-[вид отображения]
+    +e.link.A(href="#")
+        +e.image
+            +b.lb
+                +e.sale Распродажа
+            img(src="URL_IMG", alt="")
+        +e.info
+            +e.name НАЗВАНИЕ
+            +e.article АРТИКУЛ
+            +e.body ОПИСАНИЕ (МОЖЕТ СОДЕРЖАТЬ ТЕГИ "P", "TABLE", "UL", "OL")
+            +e.price-presence
+                +e.prices
+                    +b.price_current ЦЕНА
+                    +b.price_none ЦЕНА
+                    +b.price_manufacturer ЦЕНА ЗАВОДА
+                +b.presence_in В НАЛИЧИИ
+                +b.presence_none ПОД ЗАКАЗ
+// КОНЕЦ: item + item-unit + item-unit-[вид отображения] (css)
+
+// item + item-unit + item-unit-[вид отображения] (css)
++b.item.item-unit.item-unit-[вид отображения]
+    +e.image
+        a(href="#")
+            +b.lb
+                +e.sale Распродажа
+            img(src="URL_IMG", alt="")
+    +e.info
+        +e.cont
+            +e.name НАЗВАНИЕ
+            +e.body ОПИСАНИЕ (МОЖЕТ СОДЕРЖАТЬ ТЕГИ "P", "TABLE", "UL", "OL")
+        +e.commerce
+            +e.prices
+                +b.price_current ЦЕНА
+                +b.price_none ЦЕНА
+                +b.price_manufacturer ЦЕНА ЗАВОДА
+            +b.presence_in В НАЛИЧИИ
+            +b.presence_none ПОД ЗАКАЗ
+            +e.fav-cmp
+                +b.favorites_short
+                +b.compare_short
+// КОНЕЦ: item + item-unit + item-unit-[вид отображения] (css)
+
+// item + item-unit + item-unit-[вид отображения] (css)
++b.item.item-unit.item-unit-[вид отображения]
+    +e.image
+        a(href="#")
+            +b.lb
+                +e.sale Распродажа
+            img(src="URL_IMG", alt="")
+    +e.info
+        +e.cont
+            +e.name НАЗВАНИЕ
+            +e.body ОПИСАНИЕ (МОЖЕТ СОДЕРЖАТЬ ТЕГИ "P", "TABLE", "UL", "OL")
+        +e.commerce
+            +e.prices
+                +b.price ЦЕНА
+                +b.price ЦЕНА ЗАВОДА
+            +b.presence_in В НАЛИЧИИ
+            +b.presence_none ПОД ЗАКАЗ
+            +e.fav-cmp
+                +b.favorites_short
+                +b.compare_short
+        +e.btns
+            a.btn.btn_primary Запросить КП
+            a.btn.btn_three Купить в лизинг
+// КОНЕЦ: item + item-unit + item-unit-[вид отображения] (css)

@@ -1,0 +1,116 @@
+@import "../../styles/helpers/_helpers";
+
+.pg {
+  margin: 25px 0;
+  li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    &:before {
+      display: none;
+    }
+  }
+}
+.pg__list {
+  display: flex;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+}
+.pg__item {
+  border-radius: 7px;
+  // border: 1px solid $color5;
+  background-color: #ffffff;
+  margin: 0 3px 0 2px;
+  text-align: center;
+  transition: all 0.3s;
+  &:hover {
+    // background-color: $color5;
+    // color: $white;
+    a {
+      // color: $white;
+    }
+  }
+}
+.pg__current,
+.pg__current:hover {
+  // background-color: $color2;
+  // border-color: $color2;
+  // color: $white;
+}
+.pg__current {
+    width: 27px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.pg__link {
+  // color: $color5;
+  // font-family: $MuseoSansCyrl;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 19px;
+  width: 25px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.pg__first,
+.pg__last {
+	a {
+		text-indent: -999999px;
+		&:before {
+			content: '';
+			position: absolute;
+			top: 0;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			margin: auto;
+		}
+	}
+}
+.pg__first {
+	a {
+		&:before {
+			// @include svgsprite(arrow-left-first);
+		}
+	}
+}
+.pg__last {
+	a {
+		&:before {
+			// @include svgsprite(arrow-right-last);
+		}
+	}
+}
+.pg__arrow {
+  margin: 0;
+  a {
+    // color: $color2;
+    &:hover {
+      // color: $color1;
+    }
+  }
+}
+.pg__previous,
+.pg__next {
+  a {
+    // font-family: $verdana;
+    font-size: 14px;
+  }
+}
+.pg__previous {
+	margin-right: 13px;
+}
+.pg__next {
+	margin-left: 12px;
+}
+.pg__ellipsis,
+.pg__ellipsis:hover {
+  border: none;
+  background-color: transparent;
+  // color: $color5;
+}

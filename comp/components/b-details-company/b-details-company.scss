@@ -1,0 +1,24 @@
+@import "../../styles/helpers/_helpers";
+
+.b-details-company {
+    .table-wrapper {
+        @include min-screen(992px) {
+            overflow: visible;
+        }
+    }
+    table {
+        td {
+            @include first(1) {
+                font-weight: 600;
+            }
+        }
+    }
+    .b__cont {
+        .table-wrapper {
+            @include max-screen(767px) {
+                margin-left: -15px;
+                margin-right: -15px;
+            }
+        }
+    }
+}

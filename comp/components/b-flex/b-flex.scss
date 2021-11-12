@@ -1,0 +1,22 @@
+@import "../../styles/helpers/_helpers";
+
+.b-flex {
+    .b-about,
+    .b-news {
+        flex: 1;
+    }
+    .b-about {
+        margin-right: 30px;
+        @include max-screen(991px) {
+            margin-right: 0;
+            margin-bottom: 80px;
+        }
+    }
+}
+.b-flex__container {
+    display: flex;
+    flex-flow: row nowrap;
+    @include max-screen(991px) {
+        flex-direction: column;
+    }
+}

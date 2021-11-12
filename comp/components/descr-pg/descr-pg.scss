@@ -1,0 +1,37 @@
+@import "../../styles/helpers/_helpers";
+
+.descr-pg {
+  margin: 30px 0;
+  @include max-screen(479px) {padding-left: 20px; padding-right: 20px;}
+}
+.descr-pg__inner {
+    @include max-screen(991px) {
+        overflow: hidden;
+        transition: all 0.25s;
+    }
+}
+.descr-pg_top {
+	.descr-pg__inner {
+		@include max-screen(991px) {
+			max-height: 39px;
+		}
+	}
+    h4 {
+        margin: 34px 0 7px;
+    }
+}
+.descr-pg_bottom {
+    .descr-pg__inner {
+        @include max-screen(991px) {
+            max-height: 60px;
+        }
+    }
+}
+.descr-pg__more {
+    color: #1a669e;
+    border-bottom: 1px dotted #1a669e;
+    cursor: pointer;
+    &:hover {
+        border-color: transparent;
+    }
+}

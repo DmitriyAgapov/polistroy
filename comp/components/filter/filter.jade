@@ -1,0 +1,199 @@
+// filter
++b.filter
+    +e.inner
+        //- +e.overlay
+        
+        +e.row_stock
+            +e.title Наличие
+            +e.content.form-checkboxes
+              input.checkbox#row0-checkbox-1(name="row0-checkbox", type="checkbox")
+              label(for="row0-checkbox-1")
+                  | Техника в наличии
+                  +e.SPAN.presence 111
+          
+        +e.row
+          +e.title Марка шасси
+          +e.content.form-checkboxes
+            +e.item
+              input.checkbox#row1-checkbox-1(name="row1-checkbox", type="checkbox")
+              label(for="row1-checkbox-1")
+                  | Урал
+                  +e.SPAN.presence 1
+            +e.item
+              input.checkbox#row1-checkbox-2(name="row1-checkbox", type="checkbox")
+              label(for="row1-checkbox-2")
+                  | Маз
+                  +e.SPAN.presence 11
+            +e.item
+              input.checkbox#row1-checkbox-3(name="row1-checkbox", type="checkbox")
+              label(for="row1-checkbox-3")
+                  | Камаз
+                  +e.SPAN.presence 111
+
+        +e.row
+            +e.title Нагрузка на ССУ
+            +e.content.form-checkboxes
+                +e.item
+                  input.checkbox#row2-checkbox-1(name="row2-checkbox", type="checkbox")
+                  label(for="row2-checkbox-1")
+                      | 7,5
+                      +e.SPAN.presence 1
+                +e.item
+                  input.checkbox#row2-checkbox-2(name="row2-checkbox", type="checkbox")
+                  label(for="row2-checkbox-2")
+                      | 8
+                      +e.SPAN.presence 11
+                +e.item
+                  input.checkbox#row2-checkbox-3(name="row2-checkbox", type="checkbox")
+                  label(for="row2-checkbox-3")
+                      | 9,5
+                      +e.SPAN.presence 111
+                +e.item
+                  input.checkbox#row2-checkbox-4(name="row2-checkbox", type="checkbox")
+                  label(for="row2-checkbox-4")
+                      | 10
+                      +e.SPAN.presence 1
+                +e.item
+                  input.checkbox#row2-checkbox-5(name="row2-checkbox", type="checkbox")
+                  label(for="row2-checkbox-5")
+                      | 11
+                      +e.SPAN.presence 11
+                +e.item
+                  input.checkbox#row2-checkbox-6(name="row2-checkbox", type="checkbox")
+                  label(for="row2-checkbox-6")
+                      | 12.3
+                      +e.SPAN.presence 111
+
+        +e.row
+            +e.title Колесная формула
+            +e.content#wheel-arrangement.form-checkboxes
+                +e.item
+                    input.checkbox#row3-checkbox-1(name="row3-checkbox", type="checkbox")
+                    label(for="row3-checkbox-1")
+                        | 6x4
+                        +e.SPAN.presence 1
+                +e.item
+                    input.checkbox#row3-checkbox-2(name="row3-checkbox", type="checkbox")
+                    label(for="row3-checkbox-2")
+                        | 6x6
+                        +e.SPAN.presence 11
+                +e.item
+                    input.checkbox#row3-checkbox-3(name="row3-checkbox", type="checkbox")
+                    label(for="row3-checkbox-3")
+                        | 6x4
+                        +e.SPAN.presence 111
+                +e.item
+                    input.checkbox#row3-checkbox-4(name="row3-checkbox", type="checkbox")
+                    label(for="row3-checkbox-4")
+                        | 6x4
+                        +e.SPAN.presence 1
+                +e.other
+                    div
+                        +e.item
+                            input.checkbox#row3-checkbox-5(name="row3-checkbox", type="checkbox")
+                            label(for="row3-checkbox-5")
+                                | 6x6
+                                +e.SPAN.presence 11
+                        +e.item
+                            input.checkbox#row3-checkbox-6(name="row3-checkbox", type="checkbox")
+                            label(for="row3-checkbox-6")
+                                | 6x4
+                                +e.SPAN.presence 111
+                +e.more
+                    span показать все
+              
+          +e.row
+              +e.title Мощность двигателя
+              +e.content.form-checkboxes
+                  +e.item
+                      input.checkbox#row4-checkbox-5(name="row4-checkbox", type="checkbox")
+                      label(for="row4-checkbox-5")
+                          | 230
+                          +e.SPAN.presence 1
+                  +e.item
+                      input.checkbox#row4-checkbox-6(name="row4-checkbox", type="checkbox")
+                      label(for="row4-checkbox-6")
+                          | 240
+                          +e.SPAN.presence 11
+                  +e.item
+                      input.checkbox#row4-checkbox-7(name="row4-checkbox", type="checkbox")
+                      label(for="row4-checkbox-7")
+                          | 275
+                          +e.SPAN.presence 111
+
+        +e.row
+            +e.title Тип шасси
+            +e.content#type-chassis.form-checkboxes
+                +e.item
+                    input.checkbox#row5-checkbox-1(name="row5-checkbox", type="checkbox")
+                    label(for="row5-checkbox-1")
+                        | Урал-M
+                        +e.SPAN.presence 1
+                +e.item
+                    input.checkbox#row5-checkbox-2(name="row5-checkbox", type="checkbox")
+                    label(for="row5-checkbox-2")
+                        | Урал NEXT
+                        +e.SPAN.presence 11
+                +e.item
+                    input.checkbox#row5-checkbox-3(name="row5-checkbox", type="checkbox")
+                    label(for="row5-checkbox-3")
+                        | Урал капотные
+                        +e.SPAN.presence 111
+                +e.item
+                    input.checkbox#row5-checkbox-4(name="row5-checkbox", type="checkbox")
+                    label(for="row5-checkbox-4")
+                        | Урал-M
+                        +e.SPAN.presence 1
+                +e.other
+                    div
+                        +e.item
+                            input.checkbox#row5-checkbox-5(name="row5-checkbox", type="checkbox")
+                            label(for="row5-checkbox-5") Урал NEXT
+                        +e.item
+                            input.checkbox#row5-checkbox-6(name="row5-checkbox", type="checkbox")
+                            label(for="row5-checkbox-6") Урал капотные
+                        +e.item
+                            input.checkbox#row5-checkbox-7(name="row5-checkbox", type="checkbox")
+                            label(for="row5-checkbox-7") Урал-M
+                        +e.item
+                            input.checkbox#row5-checkbox-8(name="row5-checkbox", type="checkbox")
+                            label(for="row5-checkbox-8") Урал NEXT
+                        +e.item
+                            input.checkbox#row5-checkbox-9(name="row5-checkbox", type="checkbox")
+                            label(for="row5-checkbox-9") Урал кап
+                        +e.item
+                            input.checkbox#row5-checkbox-10(name="row5-checkbox", type="checkbox")
+                            label(for="row5-checkbox-10") Урал-M
+                        +e.item
+                            input.checkbox#row5-checkbox-11(name="row5-checkbox", type="checkbox")
+                            label(for="row5-checkbox-11") Урал NEXT
+                        +e.item
+                            input.checkbox#row5-checkbox-12(name="row5-checkbox", type="checkbox")
+                            label(for="row5-checkbox-12") Урал кап
+                +e.more
+                    span показать все
+                
+        //- +e.row
+        //-     +e.title Цена, руб
+        //-     +e.content
+        //-         .slider  
+        //-             .ui-slider-range 
+        //-                 .ui-slider-handle.ui-slider-handle__left
+        //-                     span.value 1965000
+        //-                 .ui-slider-handle.ui-slider-handle__right
+        //-                     span.value 1965000
+                
+        +e.row
+            +e.title Спальное место
+            +e.content.form-radios
+                +e.item
+                    input.radio#radio-berth-1(name="radio-berth", type="radio")
+                    label(for="radio-berth-1") есть
+                +e.item
+                    input.radio#radio-berth-2(name="radio-berth", type="radio")
+                    label(for="radio-berth-2") нет
+
+        +e.action.form-actions
+            input.edit-submit(type="submit", name="op", value="Подобрать")
+            input.edit-clear(type="submit", name="op", value="Сбросить")
+// КОНЕЦ: filter

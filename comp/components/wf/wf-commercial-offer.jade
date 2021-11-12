@@ -1,0 +1,24 @@
+// wf (css)
+form.webform-submission-form
+    .form-item.form-item-markup
+        p Укажите Ваши контактные данные и в течение 1 рабочего дня мы отправим Вам коммерческое предложение.
+    .webform-flexbox
+        .webform-flex.webform-flex--1
+            .webform-flex--container
+                div
+                    .form-item
+                        input.error.form-text.required(type='text' name='name' value='' size='60' maxlength='255' placeholder='Ваше имя*' required='required' aria-required='true' im-insert='true')
+                    .form-item
+                        input.error.form-text.required(type='text' name='phone' value='' size='60' maxlength='255' placeholder='Телефон*' required='required' aria-required='true' im-insert='true')
+                    .form-item
+                        input.form-text.required(type='text' name='email' value='' size='60' maxlength='255' placeholder='E-mail*' required='required' aria-required='true' im-insert='true')
+        .webform-flex.webform-flex--2
+            .webform-flex--container
+                .form-item
+                    textarea.form-textarea(name='company' rows='3' cols='60' placeholder='Название организации, вид деятельности*')
+    .form-item
+        p.privacy-policy
+            | Отправляя форму вы подтверждаете согласие с
+            a(target='_blank' href='/privacy-policy')  политикой обработки персональных данных
+            | .
+// КОНЕЦ: wf (css)

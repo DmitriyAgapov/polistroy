@@ -1,0 +1,17 @@
+@import "../../../styles/helpers/_helpers";
+
+.logo {
+    margin-top: -20px;
+	margin-right: 51px;
+	@include max-screen(1199px) {margin-right: 30px;}
+}
+.logo__link {
+    text-indent: -999999px;
+    display: block;
+    background: url(../img/logo.svg) 0 0 no-repeat;
+    width: 295px;
+    height: 58px;
+    border: none;
+    text-decoration: none;
+	@include max-screen(1199px) {background-size: contain; width: 247px; height: 49px;}
+}

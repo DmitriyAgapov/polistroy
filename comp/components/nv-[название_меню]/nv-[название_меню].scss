@@ -1,0 +1,38 @@
+@import "../../styles/helpers/_helpers";
+
+.nv {
+    flex-grow: 1;
+}
+.nv__list {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: flex-end;
+}
+.nv__item {
+    margin: 0 24px 0 0;
+    @include last(1) {
+        margin-right: 0;
+    }
+    &:before {
+        display: none;
+    }
+    > a {
+        color: #484f55;
+        text-decoration: none;
+        border: none;
+        text-transform: uppercase;
+        letter-spacing: 0.2px;
+        &:hover {
+            color: #dd7540;
+        }
+    }
+}
+.nv__submenu {
+    ul {}
+    li {
+        a {}
+    }
+}
+
+.nv-[название_меню] {}

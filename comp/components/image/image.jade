@@ -1,0 +1,17 @@
+// image
+// пресет для основного 638х427
+// пресет для превью 85х58
+- var numImage = 12;
++b.image
+	//- include ../lb-sale/lb-sale_big
+	+e.big
+		- for (var i=1; i<=numImage; i++)
+			+e.item
+				a(href="img/temp/09.jpg")
+					img(src="img/temp/09.jpg", alt="")
+	+e.preview
+		+e.preview-inner
+			- for (var i=1; i<=numImage; i++)
+				+e.item
+					img(src="img/temp/10.jpg", alt="")
+		//- include ../arrows-slider/arrows-slider_s2

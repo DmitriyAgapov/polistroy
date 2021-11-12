@@ -1,0 +1,86 @@
+@import "../../styles/helpers/_helpers";
+
+.favorites {
+    a {
+        padding-left: 27px;
+        border: none;
+        text-decoration: none;
+        letter-spacing: 0.2px;
+        position: relative;
+        color: #84888b;
+        &:hover {
+            color: $color2;
+            &:before {
+                @include svgsprite(star-small-2);
+            }
+        }
+        &:before {
+            content: '';
+            position: absolute;
+            top: -1px;
+            left: 0;
+            @include svgsprite(star-small);
+        }
+    }
+    a.is-active {
+        color: $color2;
+        &:before {
+            @include svgsprite(star-small-3);
+        }
+    }
+}
+.favorites_go-page.favorites_pc {
+    a {
+        color: $white;
+        &:before {
+            @include svgsprite(star-big);
+        }
+        &:hover {
+            color: $white;
+            &:before {
+                @include svgsprite(star-big-3);
+            }
+        }
+        &.is-active {
+            &:before {
+                @include svgsprite(star-big-3);
+            }
+        }
+    }
+}
+.favorites_go-page.favorites_mobile {
+	a {
+		color: $color2;
+		&:before {
+			@include svgsprite(star-4);
+		}
+		&.is-active {
+			&:before {
+				@include svgsprite(star-big-3);
+			}
+		}
+	}
+}
+.favorites_node {
+    a {
+        color: $color2;
+		padding: 0;
+		display: block;
+		width: 21px;
+		height: 20px;
+        text-indent: -999999px;
+        &:before {
+            @include svgsprite(star-3);
+        }
+        &:hover {
+            &:before {
+                @include svgsprite(star-3);
+            }
+        }
+    }
+    a.is-active {
+        &:before {
+            @include svgsprite(star-big-3);
+        }
+    }
+}

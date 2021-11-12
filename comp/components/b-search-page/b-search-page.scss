@@ -1,0 +1,23 @@
+@import "../../styles/helpers/_helpers";
+
+.b-search-page {
+    .b__hd {
+        .search {
+            max-width: 500px;
+            width: 100%;
+        }
+        form {
+            display: flex;
+            overflow: hidden;
+        }
+        label {
+            display: none;
+        }
+    }
+    .b__cont {
+        @include max-screen(767px) {
+            margin-left: -15px;
+            margin-right: -15px;
+        }
+    }
+}

@@ -1,0 +1,110 @@
+@import "../../styles/helpers/_helpers";
+
+.b-contacts {
+    display: flex;
+    flex-wrap: wrap;
+    @include max-screen(767px) {
+        flex-direction: column;
+        margin-left: -15px;
+        margin-right: -15px;
+    }
+}
+.b-contacts__item {
+    @include last(1) {
+        margin-right: 0;
+    }
+    @include max-screen(767px) {
+        @include last(1) {
+            margin-bottom: 0;
+        }
+        margin-bottom: 2px;
+    }
+    flex: 1;
+    padding: 23px 20px 26px;
+    text-align: center;
+    margin-right: 2px;
+    line-height: 18px;
+    background-color: $white;
+    span {
+        display: inline-block;
+    }
+}
+.b-contacts__item_phone {
+    .b-contacts__title {
+        span {
+            &:before {
+                content: "\f879";
+                top: -2px;
+            }
+        }
+    }
+}
+.b-contacts__item_email {
+    .b-contacts__title {
+        span {
+            &:before {
+                content: "\f0e0";
+                top: 1px;
+            }
+        }
+    }
+}
+.b-contacts__item_adress {
+    .b-contacts__title {
+        span {
+            &:before {
+                content: "\f3c5";
+                top: 0;
+            }
+        }
+    }
+}
+.b-contacts__item_time {
+    width: 100%;
+    flex: 0 0 auto;
+    margin-top: 2px;
+    @include min-screen(768px) {
+        text-align: left;
+    }
+    @include min-screen(1200px) {
+        padding-left: 136px;
+    }
+    @include screen(992px, 1199px) {
+        padding-left: 104px;
+    }
+    @include screen(768px, 991px) {
+        padding-left: 66px;
+    }
+    .b-contacts__title {
+        span {
+            &:before {
+                content: "\f017";
+                top: 0;
+            }
+        }
+    }
+}
+.b-contacts__title {
+    font-size: map-get($font-size, normaPlus);
+    font-weight: 700;
+    margin-bottom: 10px;
+    span {
+        position: relative;
+        padding-left: 25px;
+        &:before {
+            font-family: "Font Awesome 5 Pro";
+            font-weight: 400;
+            position: absolute;
+            left: 0;
+            line-height: 1;
+        }
+    }
+}
+.b-contacts__cont {
+    div {
+        @include last(1) {
+            margin-bottom: 0;
+        }
+        margin-bottom: 4px;
+    }
+}

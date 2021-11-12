@@ -1,0 +1,76 @@
+// wf (css)
+form.webform-submission-form
+    .form-item.form-item-markup
+        p Укажите Ваши контактные данные и в течение 1 рабочего дня мы отправим Вам коммерческое предложение.
+    .webform-flexbox
+        .webform-flex.webform-flex--1
+            .webform-flex--container
+                div
+                    .webform-flexbox
+                        .webform-flex.webform-flex--1
+                            .webform-flex--container
+                                .form-item
+                                    select.cs-select
+                                        option(value="0") Аванс*
+                                        option(value="1") 10%
+                                        option(value="2") 20%
+                                        option(value="3") 30%
+                                        option(value="4") 40%
+                                        option(value="5") 50%
+                        .webform-flex.webform-flex--1
+                            .webform-flex--container
+                                .form-item
+                                    select.cs-select
+                                        option(value="0") Срок лизинга*
+                                        option(value="1") 12 месяцев
+                                        option(value="2") 24 месяца
+                                        option(value="3") 36 месяцев
+                    .form-item
+                        input.form-text.required(type='text' name='name' value='' size='60' maxlength='255' placeholder='Ваше имя*' required='required' aria-required='true' im-insert='true')
+                    .webform-flexbox
+                        .webform-flex.webform-flex--1
+                            .webform-flex--container
+                                .form-item
+                                    input.form-text.required(type='text' name='phone' value='' size='60' maxlength='255' placeholder='Телефон*' required='required' aria-required='true' im-insert='true')
+                        .webform-flex.webform-flex--1
+                            .webform-flex--container
+                                .form-item
+                                    input.form-text.required(type='text' name='email' value='' size='60' maxlength='255' placeholder='E-mail*' required='required' aria-required='true' im-insert='true')
+        .webform-flex.webform-flex--2
+            .webform-flex--container
+                .form-item
+                    textarea.form-textarea(name='company' rows='3' cols='60' placeholder='Название организации, вид деятельности*')
+    .form-item
+        p.privacy-policy
+            | Отправляя форму вы подтверждаете согласие с
+            a(target='_blank' href='/privacy-policy')  политикой обработки персональных данных
+            | .
+        //+e.fields
+        //    +e.col1
+        //        +e.field.__advance
+        //            select.cs-select
+        //                option(value="0") Аванс*
+        //                option(value="1") 10%
+        //                option(value="2") 20%
+        //                option(value="3") 30%
+        //                option(value="4") 40%
+        //                option(value="5") 50%
+        //        +e.field.__lizing
+        //            select.cs-select
+        //                option(value="0") Срок лизинга*
+        //                option(value="1") 12 месяцев
+        //                option(value="2") 24 месяца
+        //                option(value="3") 36 месяцев
+        //        +e.field.__name
+        //            input(type="text", name='name', placeholder="Ваше имя")
+        //        +e.field.__phone
+        //            input(type="text", name='phone', placeholder="Телефон*")
+        //        +e.field.__email
+        //            input(type="text", name='email', placeholder="E-mail*")
+        //    +e.col2
+        //        +e.field.__company
+        //            textarea(placeholder="Название организации, вид деятельности*")
+        //+e.privacy-policy
+        //    | Отправляя форму вы подтверждаете согласие с
+        //    a(href="privacy-policy") политикой обработки персональных данных
+// КОНЕЦ: wf (css)

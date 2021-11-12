@@ -1,0 +1,145 @@
+@import "../../styles/helpers/_helpers";
+
+.to-basket_s {
+    .form-item {
+        display: none !important;
+    }
+    .form-actions {
+        width: 50px;
+        height: 50px;
+        &:before {
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            margin: auto;
+        }
+        input {
+            padding: 0;
+            text-indent: -999999px;
+        }
+    }
+}
+.to-basket_m {
+    .form-actions {
+        width: 60px;
+        height: 60px;
+        &:before {
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            margin: auto;
+        }
+        input {
+            padding: 0;
+            text-indent: -999999px;
+        }
+    }
+}
+.to-basket_l {
+    .form-actions {
+        width: 186px;
+        height: 60px;
+        &:before {
+            top: 22px;
+            left: 39px;
+        }
+        input {
+            padding: 0 0 0 30px;
+        }
+    }
+}
+
+.to-basket {
+  form {
+    display: flex;
+  }
+  .form-actions {
+      background-color: $color1;
+      flex: 0 0 auto;
+      &:before {
+          content: '';
+          position: absolute;
+          @include sprite($cart-02);
+      }
+    input {
+      background-color: transparent;
+      font-family: $font;
+      font-size: $normaPlus;
+      font-weight: 700;
+      line-height: 20px;
+      transition: all 0.3s;
+      border: none;
+      color: white;
+      width: 100%;
+      height: 100%;
+      position: relative;
+      z-index: 1;
+    }
+  }
+  .form-item {
+      .form-item {
+          margin: 0 15px 0 0;
+          align-items: center;
+          height: 40px;
+          display: flex;
+          label {
+              display: none;
+          }
+          input {
+              border: 1px solid #9e9e9e;
+              background-color: #fff;
+              color: #2a2b2c;
+              padding: 2px 0 3px;
+              width: 23px;
+              text-align: center;
+              &:hover {
+                  background-color: #fff;
+              }
+          }
+      }
+  }
+
+  .qty-up,
+  .qty-down {
+    position: absolute;
+    left: 0;
+    line-height: 1;
+    cursor: pointer;
+    width: 23px;
+    height: 9px;
+    &:before {
+      content: '';
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      margin: auto;
+    }
+  }
+  .qty-up {
+    top: -2px;
+    &:before {
+      // @include svgsprite(arrow-up-01);
+    }
+    &:hover {
+      &:before {
+        // @include svgsprite(arrow-up-02);
+      }
+    }
+  }
+  .qty-down {
+    bottom: -2px;
+    &:before {
+      top: 4px;
+      // @include svgsprite(arrow-down-01);
+    }
+    &:hover {
+      &:before {
+        // @include svgsprite(arrow-down-02);
+      }
+    }
+  }
+}

@@ -1,0 +1,51 @@
+@import "../../styles/helpers/_helpers";
+
+.b-contacts-node {
+    .b__cont {
+        display: flex;
+        flex-wrap: wrap;
+        background-color: #fff;
+        padding: 18px 28px;
+        @include max-screen(1199px) {
+            flex-direction: column;
+        }
+        .b__phone,
+        .b__email {
+            @include max-screen(1199px) {
+                flex: 1 0 auto;
+            }
+            flex: 0 0 50%;
+            margin-bottom: 8px;
+            a {
+                font-weight: 700;
+                //font-size: map-get($font-size, normaPlus);
+                position: relative;
+                &:before {
+                    font-family: "Font Awesome 5 Pro";
+                    position: absolute;
+                    left: 0;
+                    line-height: 1;
+                }
+            }
+        }
+    }
+    .b__phone {
+        a {
+            // color: $text;
+            padding-left: 25px;
+            &:before {
+                content: "\f879";
+                top: 3px;
+            }
+        }
+    }
+    .b__email {
+        a {
+            padding-left: 25px;
+            &:before {
+                content: "\f0e0";
+                top: 4px;
+            }
+        }
+    }
+}

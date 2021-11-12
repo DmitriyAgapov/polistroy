@@ -1,0 +1,27 @@
+@import "../../styles/helpers/_helpers";
+
+.b-fav-page {
+    .b__cont {
+        @include max-screen(767px) {
+            margin-left: -15px;
+            margin-right: -15px;
+        }
+    }
+    .presence,
+    .price_factory {
+        text-align: left !important;
+    }
+    .item__commerce {
+        width: 211px;
+        align-items: flex-start;
+    }
+    .item__fav-cmp {
+        flex-direction: column;
+        .fav {
+            margin-bottom: 9px;
+        }
+        .fav, .cmp {
+            margin-left: 0;
+        }
+    }
+}

@@ -1,0 +1,86 @@
+@import "../../styles/helpers/_helpers";
+
+.b-characteristic {
+    .b__cont {
+        display: flex;
+        flex-flow: row nowrap;
+        @include max-screen(991px) {
+            flex-direction: column-reverse;
+        }
+        @include max-screen(767px) {
+            margin-left: -15px;
+            margin-right: -15px;
+        }
+    }
+    .b__table {
+        flex: 1 0 670px;
+        margin-bottom: -30px;
+        @include max-screen(1199px) {
+            flex: 1 0 640px;
+        }
+        .table-wrapper {
+            overflow: visible;
+        }
+        > h2,
+        > h3,
+        > h4 {
+            margin-top: 0;
+        }
+        table {
+            tr {
+                @include max-screen(767px) {
+                    display: block;
+                }
+            }
+            td {
+                @include first(1) {
+                    font-weight: 600;
+                    @include max-screen(767px) {
+                        border-bottom: none;
+                        padding-bottom: 0;
+                    }
+                }
+                @include max-screen(767px) {
+                    display: block;
+                }
+            }
+        }
+    }
+    .b__scheme {
+        flex: 0 0 470px;
+        margin-left: 2px;
+        @include max-screen(1199px) {
+            flex: 0 0 300px;
+        }
+        img {
+            width: 100%;
+            max-width: 100%;
+            height: auto;
+        }
+        a {
+            display: block;
+            position: relative;
+            background-color: $white;
+            @include max-screen(991px) {
+                pointer-events: none;
+            }
+            &:hover {
+                &::before {
+                    opacity: 1;
+                    cursor: zoom-in;
+                }
+            }
+            &::before {
+                content: "";
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background-color: rgba(0, 0, 0, 0.1);
+                transition: all 0.25s ease-in-out;
+                opacity: 0;
+            }
+        }
+    }
+}

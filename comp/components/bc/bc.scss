@@ -1,0 +1,19 @@
+@import "../../styles/helpers/_helpers";
+
+.bc {
+  font-size: 14px;
+  font-weight: 400;
+  color: #000000;
+  line-height: 16px;
+  margin: 13px 0 25px;
+}
+.bc__container {
+	display: flex;
+	align-items: center;
+}
+.bc__sep {
+  // @include svgsprite(right-arrow);
+  text-indent: -999999px;
+  display: inline-block;
+  margin: 3px 9px 0 12px;
+}

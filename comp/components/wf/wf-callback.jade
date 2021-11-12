@@ -1,0 +1,12 @@
+// wf (css)
+form.webform-submission-form
+    .form-item
+        input.form-text.required(type='text' name='phone' value='' size='60' maxlength='255' placeholder='Телефон*' required='required' aria-required='true' im-insert='true')
+    .form-item
+        p.privacy-policy
+            | Отправляя форму вы подтверждаете согласие с
+            a(target='_blank' href='/privacy-policy')  политикой обработки персональных данных
+            | .
+    .form-actions
+        +btn('primary', 'Заказать звонок', '_size-2')
+// КОНЕЦ: wf (css)

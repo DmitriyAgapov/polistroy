@@ -1,0 +1,24 @@
+@import "../../styles/helpers/_helpers";
+
+.b-news {
+    .b__hd {
+        .btn {
+            @include max-screen(767px) {
+                display: none;
+            }
+        }
+    }
+    .b__cont {
+        @include max-screen(767px) {
+            margin-left: -15px;
+            margin-right: -15px;
+        }
+    }
+    .b__ft {
+        margin-top: 30px;
+        display: none;
+        @include max-screen(767px) {
+            display: block;
+        }
+    }
+}

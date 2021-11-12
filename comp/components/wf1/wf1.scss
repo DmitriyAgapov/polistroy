@@ -1,0 +1,91 @@
+@import "../../styles/helpers/_helpers";
+
+.wf1 {
+    .wf__field {}
+    .wf__markup {}
+    .wf__phone {}
+    .wf__email {}
+    .wf__comment {
+        textarea {
+            height: 104px;
+        }
+    }
+    .wf__action {
+        input {}
+    }
+    .wf__upload {
+        display: flex;
+        flex-direction: column;
+        .description {
+            order: 1;
+            font-size: 11px;
+            color: #a7a7aa;
+            padding-left: 18px;
+            margin-top: 4px;
+            margin-left: 19px;
+            &:before {
+                content: '';
+                position: absolute;
+                top: 7px;
+                left: 0;
+                @include sprite($i-02);
+            }
+        }
+        table {
+            margin: 0;
+        }
+        thead {
+            display: none;
+        }
+        tr {
+            background-color: transparent;
+            margin-bottom: 10px;
+            display: block;
+            @include last(1) {
+                margin-bottom: 0;
+            }
+        }
+        td {
+            border: none;
+            padding: 0;
+            vertical-align: top;
+            display: block;
+            .description {
+                display: none;
+            }
+        }
+        // кнопка показать вес
+        .tabledrag-toggle-weight-wrapper {
+            display: none;
+        }
+        // колонка перемещения
+        td.webform-multiple-table--handle {
+            display: none;
+        }
+        // поле количество
+        .form-item-file-custom-composite-add-more-items {
+            display: none;
+        }
+        // кнопки управления одним полем изображения (add, remove)
+        .webform-multiple-table--operations {
+            display: none;
+        }
+        // кнопка добавления еще фоток
+        .webform-multiple-add {
+            margin-left: 18px;
+            order: 2;
+            input {
+                background: none;
+                padding: 0;
+                color: #004d8c;
+                font-size: $normaMinus;
+                border-width: 0 0 1px 0;
+                border-style: dashed;
+                border-color: rgba(0,77,140,0.3);
+                &:hover {
+                    border-color: transparent;
+                }
+            }
+        }
+    }
+}

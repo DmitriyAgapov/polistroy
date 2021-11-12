@@ -1,0 +1,31 @@
+@import "../../styles/helpers/_helpers";
+
+.b-catalog-similar {
+    .item-catalog-teaser-1 {
+        margin: 0 2px 2px 0;
+        @include min-screen(1200px) {
+            width: 388px;
+            @include every(3) {
+                margin-right: 0;
+            }
+        }
+        @include screen(992px, 1199px) {
+            width: 322px;
+            @include every(3) {
+                margin-right: 0;
+            }
+        }
+        @include max-screen(991px) {
+            width: 100%;
+        }
+    }
+    .b__cont {
+        display: flex;
+        flex-wrap: wrap;
+        margin-bottom: -2px;
+        @include max-screen(767px) {
+            margin-left: -15px;
+            margin-right: -15px;
+        }
+    }
+}

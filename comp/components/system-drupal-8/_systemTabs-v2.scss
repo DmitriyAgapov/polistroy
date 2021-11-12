@@ -1,0 +1,41 @@
+$color_1: #000000; // основной фон вкладок
+$color_2: #ff673d; // активная вкладка и выделение
+
+.system-tabs {
+    margin: 15px 0;
+}
+.system-tabs__list {
+    display: flex;
+    border-bottom: none;
+    margin: 0;
+    padding: 0;
+    flex-wrap: wrap;
+}
+.system-tabs__item {
+    list-style: none;
+    background: none !important;
+    margin: 0 1px 1px 0;
+    padding: 0 !important;
+    &:before {
+        display: none;
+    }
+    a {
+        display: block;
+        text-decoration: none;
+        padding: 6px 30px;
+        margin: 0;
+        font-size: 16px;
+        color: #ffffff;
+        border-radius: 5px;
+        border: none;
+        line-height: normal;
+        transition: all 0.3s;
+        background-color: $color_1;
+        &:hover {
+            background-color: $color_2;
+        }
+    }
+    a.is-active {
+        background-color: $color_2;
+    }
+}

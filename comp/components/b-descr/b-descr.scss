@@ -1,0 +1,12 @@
+@import "../../styles/helpers/_helpers";
+
+.b-descr {
+    .b__cont {
+        background-color: #fff;
+        padding: 30px;
+        @include max-screen(767px) {
+            margin-left: -15px;
+            margin-right: -15px;
+        }
+    }
+}

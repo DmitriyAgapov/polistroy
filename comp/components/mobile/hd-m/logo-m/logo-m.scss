@@ -1,0 +1,16 @@
+@import "../../styles/helpers/_helpers";
+
+.logo-m {
+	margin-right: 10px;
+}
+.logo-m__link {
+    text-indent: -999999px;
+    display: block;
+    background: url(../img/logo-m.svg) 0 0 no-repeat;
+	background-size: contain;
+    width: 57px;
+    height: 42px;
+    border: none;
+    text-decoration: none;
+	@include max-screen(359px) {width: 46px;}
+}

@@ -1,0 +1,58 @@
+@import "../../styles/helpers/_helpers";
+
+.compare {
+  margin-right: 15px;
+  display: inline-block;
+  vertical-align: top;
+  a {
+    color: #4d4d4d;
+    font-size: 16px;
+    padding-left: 21px;
+    border: none;
+    line-height: 1;
+    position: relative;
+    &:before {
+      content: '';
+      position: absolute;
+      top: 5px;
+      left: 0;
+      @include sprite($compare-gray);
+    }
+    &:hover {
+      span {border-color: transparent !important;}
+    }
+    span {
+      border-width: 0 0 1px;
+      border-color: #dddddd;
+    }
+    span.val {
+      margin-left: -4px;
+      margin-right: -4px;
+    }
+    &.is-active {
+      color: #ff713a;
+      &:before {
+        @include sprite($compare-orange);
+      }
+      span {
+        border-color: #ff713a;
+      }
+    }
+  }
+}
+.compare_dashed {
+  span {
+    border-style: dashed;
+  }
+}
+.compare_solid {
+  span {
+    border-style: solid;
+  }
+}
+.compare_fsize-s {
+  a {font-size: 14px;}
+}
+.compare_fsize-m {
+  a {font-size: 16px;}
+}

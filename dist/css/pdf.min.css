@@ -1,0 +1,2 @@
+.pdf a::before{display:inline-block;background-image:url(../img/sprite.svg);background-size:521px 497px;content:'';position:absolute;top:-2px;left:0;width:26px;height:26px;background-position:-143px -451px}.pdf a{display:-webkit-box;display:-ms-flexbox;display:flex;padding-left:35px;border-bottom:0;color:#999}.pdf a .pdf__text{font-size:15px;line-height:15px;border-bottom:1px solid #999;display:block;margin:3px 0}@media only screen and (max-width:991px){.pdf{display:none}}
+/*# sourceMappingURL=maps/pdf.min.css.map */

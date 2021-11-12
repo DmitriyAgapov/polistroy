@@ -1,0 +1,51 @@
+@import "../../styles/helpers/_helpers";
+
+.burger {
+    cursor: pointer;
+    width: 45px;
+    height: 45px;
+    line-height: 1;
+    position: relative;
+    transition: all 0.25s ease-in-out;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+}
+.burger__inner {
+	margin-bottom: -3px;
+}
+.burger__line {
+    width: 22px;
+    height: 2px;
+    background-color: #000;
+    position: relative;
+    transition: all 0.25s ease-in-out;
+    margin-bottom: 3px;
+}
+.burger__line_1 {
+    transition: all 0.25s ease-in-out;
+}
+.burger__line_2 {
+    transition: all 0.25s ease-in-out;
+}
+.burger__line_3 {
+    transition: all 0.25s ease-in-out;
+}
+.burger__line_4 {
+    transition: all 0.25s ease-in-out;
+}
+.burger.open {
+    .burger__line_1 {
+        transform: translateY(8px) rotate(45deg);
+    }
+    .burger__line_2 {
+        opacity: 0;
+    }
+    .burger__line_3 {
+        opacity: 0;
+    }
+    .burger__line_4 {
+        transform: translateY(-7px) rotate(-45deg);
+    }
+}

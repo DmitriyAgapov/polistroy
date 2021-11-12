@@ -1,0 +1,33 @@
+// b-contacts (css)
++b.SECTION.b-contacts.margin(itemscope, itemtype="http://schema.org/Organization")
+    meta(itemprop='name', content='ООО «Название компании»')
+    +e.item_phone
+      +e.title
+        span Телефоны
+      +e.cont
+        div(itemprop="telephone") 8 800 000-00-00
+        div(itemprop="telephone") 8 800 000-00-00
+        div(itemprop="telephone") 8 800 000-00-00
+    +e.item_email
+      +e.title
+        span Email 
+      +e.cont
+        div(itemprop="email") info@companymail.ru
+        div(itemprop="email") sale@companymail.ru
+    +e.item_adress(itemprop="address" itemscope itemtype="http://schema.org/PostalAddress")
+      +e.title
+        span Адрес 
+      +e.cont
+        div
+            span(itemprop="addressRegion") Челябинская область
+            | , 
+            span(itemprop="addressLocality") Город компании
+            | , 
+            span(itemprop="streetAddress") улица компании д.&nbsp;78, оф.&nbsp;230
+    +e.item_time
+        +e.title
+            span Режим работы
+        +e.cont
+            div ПН-ПТ: 9-00–18:00 (часовой пояс МСК+2)
+            div СБ-ВС — выходные дни
+// КОНЕЦ: b-contacts (css)

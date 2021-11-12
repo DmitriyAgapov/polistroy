@@ -1,0 +1,10 @@
+@import "../../styles/helpers/_helpers";
+
+.hd {
+	@include max-screen(991px) {display: none;}
+}
+.hd__container {
+	display: flex;
+	align-items: center;
+    height: 105px;
+}

@@ -1,0 +1,12 @@
+@import "../../styles/helpers/_helpers";
+
+.b-location-map {
+    .b__cont {
+        height: 313px;
+        background-color: #fafafa;
+        @include max-screen(767px) {
+            margin-left: -15px;
+            margin-right: -15px;
+        }
+    }
+}

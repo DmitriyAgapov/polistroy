@@ -1,0 +1,15 @@
+#toolbar-administration {
+    .toolbar-tab {
+        position: initial !important;
+    }
+    li {
+        &:before {
+            display: none;
+        }
+    }
+    #toolbar-item-administration-tray {
+        li {
+            margin: 0;
+        }
+    }
+}

@@ -1,0 +1,48 @@
+@import "../../styles/helpers/_helpers";
+
+.cart-block {}
+.cart-block__link {
+    border: 1px solid #efefef;
+    width: 140px;
+    height: 45px;
+    display: flex;
+    color: inherit;
+    padding: 8px 0 0 14px;
+    &:hover {
+        border-color: #efefef;
+    }
+}
+.cart-block__ico {
+    @include sprite($cart);
+    margin-right: 12px;
+    position: relative;
+    span {
+        background-color: $color1;
+        line-height: 12px;
+        font-size: 8.8px;
+        color: #FFFFFF;
+        width: 16px;
+        height: 16px;
+        border-radius: 50%;
+        position: absolute;
+        top: -6px;
+        right: -7px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}
+.cart-block__name {
+    font-weight: 500;
+    line-height: 1;
+    font-size: 14px;
+    display: block;
+    margin-bottom: 2px;
+}
+.cart-block__price {
+    font-weight: 500;
+    line-height: 1;
+    font-size: 11px;
+    color: #004D8C;
+    display: block;
+}

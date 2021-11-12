@@ -1,0 +1,23 @@
+@import "../../styles/helpers/_helpers";
+
+.presence {
+  font-family: verdana, arial;
+  font-weight: 400;
+  line-height: 1;
+  color: #9f9f9f;
+}
+.presence_in {
+  color: #37b019;
+}
+.presence_wait {
+  color: #8d703c;
+}
+.presence_size-l {
+  font-size: 14px;
+}
+.presence_size-m {
+  font-size: 13px;
+}
+.presence_size-s {
+  font-size: 12px;
+}

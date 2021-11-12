@@ -1,0 +1,30 @@
+@import "../../styles/helpers/_helpers";
+
+.search-result {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    // margin-top: 1px;
+    z-index: 100;
+}
+.search-result__item {
+    background-color: #fff;
+    border-bottom: 1px solid #e6e6e6;
+    border-left: 1px solid #333;
+    border-right: 1px solid #333;
+    @include last(1) {
+        border-bottom: 1px solid #333;
+        border-radius: 0 0 3px 3px;
+    }
+}
+.search-result__link {
+	display: block;
+	padding: 5px;
+}
+.search-result__item.active .search-result__link,
+.search-result__link:hover {
+	background-color: #e74c3c;
+	color: #fff;
+    text-decoration: none;
+}

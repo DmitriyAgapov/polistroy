@@ -1,0 +1,16 @@
+@import "../../styles/helpers/_helpers";
+
+.b-about {
+    @include min-screen(992px) {
+        margin-bottom: 0;
+    }
+    .b__cont {
+        background-color: #ffffff;
+        padding: 24px 30px;
+        @include max-screen(767px) {
+            margin-left: -15px;
+            margin-right: -15px;
+            padding: 15px 15px 20px;
+        }
+    }
+}

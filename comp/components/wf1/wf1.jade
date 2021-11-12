@@ -1,0 +1,104 @@
+// wf + wf1
+form(action="#")
+    +b.wf.wf1
+        +e.markup
+            p Текст перед формой
+        +e.fields
+            +e.field.__name
+                input(type="text", placeholder="PLACEHOLDER")
+            +e.field.__email
+                input(type="text", placeholder="PLACEHOLDER")
+            +e.field.__phone
+                input(type="text", placeholder="PLACEHOLDER")
+            +e.field.__comment
+                textarea(placeholder="PLACEHOLDER")
+            +e.field.__lizing
+                select.cs-select
+                    option(value="0") Срок лизинга*
+                    option(value="1") 12 месяцев
+                    option(value="2") 24 месяца
+                    option(value="3") 36 месяцев
+
+            // обычное поле
+            +e.field.__upload
+                // загрузка изображения
+                .form-managed-file
+                    input#edit-file-upload.form-file(name="files[file]", size="22", type="file")
+                .description
+                    | Только один файл.
+                    br
+                    | Ограничение 128 МБ.
+                    br
+                    | Допустимые типы: gif jpg png.
+                    
+                // прикрепленное изображение
+                .form-managed-file
+                    span.file.file--image
+                        a(href="http://urcyamz/system/files/webform/opredelit_zapchast/_sid_/01_3.png", type="image/png; length=40924") название_картинки.png
+                    .form-action
+                        input.button.form-submit(type="submit", name="file_custom_composite_items_1_file_remove_button", value="Удалить")
+                .description
+                    | Только один файл.
+                    br
+                    | Ограничение 128 МБ.
+                    br
+                    | Допустимые типы: gif jpg png.
+                
+            //- композитное поле
+            +e.field.__upload
+                .webform-multiple-table
+                    table
+                        tbody
+                            // загрузка изображений
+                            tr
+                                td.webform-multiple-table--handle
+                                    a.tabledrag-handle(href="#", title="Изменить порядок можно, перетащив пункт мышкой.")
+                                    .handle &nbsp;
+                                td
+                                    .form-item
+                                        .form-managed-file
+                                            input#edit-file-upload.form-file(name="files[file]", size="22", type="file")
+                                        .description
+                                            | Только один файл.
+                                            br
+                                            | Ограничение 128 МБ.
+                                            br
+                                            | Допустимые типы: gif jpg png.
+                                td.webform-multiple-table--operations
+                                    input.image-button.form-submit(type="image", name="file_custom_composite_table_add_0", src="/modules/contrib/webform/images/icons/plus.svg", alt="Добавить", title="Добавить")
+                                    input.image-button.form-submit(type="image", name="file_custom_composite_table_remove_0", src="/modules/contrib/webform/images/icons/ex.svg", alt="Удалить", title="Удалить")
+                            
+                            // прикрепленные изображения
+                            tr
+                                td.webform-multiple-table--handle
+                                    a.tabledrag-handle(href="#", title="Изменить порядок можно, перетащив пункт мышкой.")
+                                    .handle &nbsp;
+                                td
+                                    .form-item
+                                        .form-managed-file
+                                            span.file.file--image
+                                                a(href="http://urcyamz/system/files/webform/opredelit_zapchast/_sid_/01_3.png", type="image/png; length=40924") название_картинки.png
+                                            .form-action
+                                                input.button.form-submit(type="submit", name="file_custom_composite_items_1_file_remove_button", value="Удалить")
+                                        .description
+                                            | Только один файл.
+                                            br
+                                            | Ограничение 128 МБ.
+                                            br
+                                            | Допустимые типы: gif jpg png.
+                    .description Прикрепите одну или несколько фотографий
+                    .webform-multiple-add
+                        .form-action
+                        input.button.form-submit(type="submit", name="file_custom_composite_table_add", value="Прикрепить еще")
+
+        +e.action
+            input(type="submit" value="Отправить")
+        +e.privacy-policy
+            | Отправляя форму вы подтверждаете согласие с
+            a(href="/privacy-policy") политикой обработки персональных данных
+        +e.privacy-policy
+            input#privacy-policy(type='checkbox')
+            label(for="privacy-policy")
+                | Отправляя форму вы даете согласие на
+                a(href="/privacy-policy") обработку персональных данных
+// КОНЕЦ: wf + wf1

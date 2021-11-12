@@ -1,0 +1,1 @@
+{"version":3,"sources":["block-banner/block-banner.scss"],"names":[],"mappings":"AAEA,cACI,WAAA,IAAA,MAAA,QACA,cAAA,IAAA,MAAA","file":"../block-banner.min.css","sourcesContent":["@import \"../../styles/helpers/_helpers\";\n\n.block-banner {\n    border-top: 1px solid #D5D5D5;\n    border-bottom: 1px solid #D5D5D5;\n}"]}

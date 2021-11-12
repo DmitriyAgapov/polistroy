@@ -1,0 +1,139 @@
+@import "../../styles/helpers/_helpers";
+
+.compare-table {
+  display: flex;
+  margin-top: 0;
+}
+.compare-table__header {
+	flex: 0 0 215px;
+  margin-right: 30px;
+  background-color: #f2f8fc;
+  box-sizing: border-box;
+  .compare-table__row {
+  	border-bottom: 1px solid #fff;
+    padding-left: 29px;
+    padding-right: 29px;
+  }
+  .compare-table__col {
+    border-left: none;
+  }
+}
+.compare-table__content {
+	flex: 1;
+	overflow: hidden;
+  padding-top: 53px;
+  padding-bottom: 30px;
+  .compare-table__row {
+  	margin-left: -23px;
+    &:first-child {
+      .compare-table__col {
+        border-bottom: none;
+      }
+    }
+  }
+  .compare-table__row-cont:hover {
+    background-color: #f7fdff;
+  }
+  .compare-table__col {
+    flex: 0 0 auto;
+    width: 221px;
+    margin-left: 23px;
+    border-bottom: 1px solid #bde6f7;
+  }
+}
+.compare-table__content-inner {
+    .mCustomScrollBox {
+        padding-bottom: 32px;
+    }
+}
+.compare-table__row {
+  display: flex;
+}
+.compare-table__col {
+  padding: 4px 0 5px;
+}
+.compare-table__characteristic-type-toggle {
+  height: 279px;
+  margin-top: 57px;
+  // margin-bottom: 151px;
+  padding-left: 29px;
+  padding-right: 29px;
+}
+.characteristic-type-toggle__label {
+	margin-bottom: 5px;
+}
+.characteristic-type-toggle__item {
+  line-height: 32px;
+  a {
+    font-size: 15px;
+    font-weight: 700;
+    color: #0072bb;
+    border-bottom-style: dashed;
+  }
+}
+.characteristic-type-toggle__item.active {
+  a {
+    color: #4d4d4d;
+    border-bottom: none;
+  }
+}
+.compare-table__product-name {
+  margin-bottom: 6px;
+  height: 77px;
+  overflow: hidden;
+  a {
+    font-weight: 700;
+  }
+}
+.compare-table__product-image {
+	height: 149px;
+  margin-bottom: 4px;
+}
+.compare-table__model-code {
+    margin-bottom: 15px;
+}
+.compare-table__row-prices {
+  margin-top: 12px;
+  height: auto !important;
+  .compare-table__col {
+    border-bottom: none;
+  }
+  .prices__price {
+    font-size: 17px;
+    margin-bottom: 3px;
+  }
+  .prices__price_from-factory {
+    color: #868686;
+    font-size: 13px;
+    line-height: 18px;
+  }
+  .units {
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+  .info {
+  	height: 113px;
+  }
+  .btn {
+    margin-bottom: 24px;
+  }
+  .postpone {
+    font-size: 13px;
+    margin-bottom: 32px;
+  }
+  .remove-item {
+    a {
+      font-size: 13px;
+      line-height: 20px;
+      border-bottom-style: dashed;
+      margin-left: 14px;
+      &:before {
+        content: '';
+        position: absolute;
+        top: 7px;
+        left: 0;
+        @include sprite($remove);
+      }
+    }
+  }
+}

@@ -1,0 +1,19 @@
+// wf (css)
+form.webform-submission-form
+    .form-item
+        textarea.form-textarea(name='comment' rows='5' cols='60' placeholder='Укажите нужную вам комплектацию техники или задайте вопрос')
+    .webform-flexbox
+        .webform-flex.webform-flex--1
+            .webform-flex--container
+                .form-item
+                    input.form-text.required(type='text' name='phone' value='' size='60' maxlength='255' placeholder='Телефон или E-mail*' required='required' aria-required='true' im-insert='true')
+        .webform-flex.webform-flex--0
+            .webform-flex--container
+                .form-actions
+                    +btn('primary', 'Отправить', '_size-2')
+    .form-item
+        p.privacy-policy
+            | Отправляя форму вы подтверждаете согласие с
+            a(target='_blank' href='/privacy-policy')  политикой обработки персональных данных
+            | .
+// КОНЕЦ: wf (css)

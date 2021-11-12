@@ -1,0 +1,32 @@
+@import "../../styles/helpers/_helpers";
+
+.lb {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+.lb_big {
+    .lb__item {
+        padding: 5px 9px 4px;
+        //font-size: $normaPlus;
+    }
+}
+.lb__item {
+    padding: 1px 5px 2px;
+    text-transform: uppercase;
+    color: #ffffff;
+    // font-size: $normaMinus;
+}
+.lb__sale {
+    background-color: #e84329;
+}
+.lb__best {
+    background-color: #75bc28;
+}
+.lb__exclusive {
+    background-color: #bf3bc7;
+}
+.lb__new {
+    background-color: #f6aa0e;
+}

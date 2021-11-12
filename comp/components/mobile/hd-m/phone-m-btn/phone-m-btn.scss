@@ -1,0 +1,17 @@
+@import "../../styles/helpers/_helpers";
+
+.phone-m-btn {}
+.phone-m-btn__link {
+    display: flex;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    span {
+        text-indent: -999999px;
+        position: relative;
+        // @include svgsprite(search-02);
+    }
+}

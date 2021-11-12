@@ -1,0 +1,25 @@
+@import "../../styles/helpers/_helpers";
+
+.tags {
+    margin: 0 0 30px;
+}
+.tags__list {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: -5px;
+}
+.tags__item {
+    margin: 0 5px 5px 0;
+}
+.tags__link {
+    border: 1px solid #000000;
+    border-radius: 10px;
+    padding: 4px 10px 6px;
+    display: block;
+    &:focus {
+        border: 1px solid #000000;
+    }
+}
+.tags__link_presence {
+    font-weight: 700;
+}

@@ -1,0 +1,150 @@
+$system-tabs: (
+    bg:                        hsla(210, 89%, 55%, 0.05),
+    bg-hover:                  #0168ae,
+    bg-active:                 #005791,
+    text:                      #000000,
+    text-hover:                #ffffff,
+    text-active:               #ffffff,
+    burger-bg:                 hsla(210, 89%, 55%, 0.05),
+    burger-bg-hover:           #ffffff,
+    submenu-bg:                #ffffff,
+    submenu-item-bg-hover:     #0168ae,
+    submenu-item-text:         #000000,
+    submenu-item-text-hover:   #ffffff,
+    submenu-item-text-active:  #ffffff,
+    submenu-item-bg-active:    #005791,
+);
+
+.system-tabs {
+    margin: 15px 0;
+    display: flex;
+    ul {
+        display: flex;
+        border-bottom: none;
+        margin: 0;
+        padding: 0;
+        flex-wrap: nowrap;
+        background-color: map-get($system-tabs, bg);
+        border-bottom: 2px solid map-get($system-tabs, bg-active);
+        li {
+            list-style: none;
+            background: none !important;
+            // margin: 0 1px 1px 0;
+            margin: 0;
+            padding: 0 !important;
+            &:before {
+                display: none;
+            }
+            &.hidden {
+                display: none;
+            }
+            a {
+                white-space: nowrap;
+                color: map-get($system-tabs, text);
+                display: block;
+                text-decoration: none;
+                // padding: 6px 30px;
+                padding: 14px 20px 12px;
+                margin: 0;
+                font-size: $norma;
+                // border-radius: 5px;
+                border: none;
+                line-height: 1;
+                transition: all 0.25s ease-in-out;
+                &:hover {
+                    color: map-get($system-tabs, text-hover);
+                    background-color: map-get($system-tabs, bg-hover);
+                }
+                &.is-active {
+                    margin-top: -5px;
+                    font-weight: 600;
+                    padding: 16px 20px 15px;
+                    color: map-get($system-tabs, text-active);
+                    background-color: map-get($system-tabs, bg-active);
+                }
+            }
+        }
+    }
+}
+
+.system-tabs__expanded {
+    position: relative;
+    &:hover {
+        .system-tabs__burger {
+            background-color: map-get($system-tabs, burger-bg-hover);
+            &:before {
+                transform: rotate(90deg);
+            }
+            &:after {
+                background-color: map-get($system-tabs, burger-bg-hover);
+            }
+        }
+        .system-tabs__mn {
+            opacity: 1;
+            visibility: visible;
+        }
+    }
+}
+.system-tabs__burger {
+    background-color: map-get($system-tabs, burger-bg);
+    border-bottom: 2px solid map-get($system-tabs, bg-active);
+    z-index: 1;
+    width: 44px;
+    height: 44px;
+    flex: 0 0 auto;
+    transition: all 0.25s ease-in-out;
+    &:before {
+        content: '';
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        margin: auto;
+        transition: all 0.25s ease-in-out;
+        @include sprite($menu);
+    }
+    &:after {
+        content: '';
+        position: absolute;
+        right: 0;
+        bottom: -2px;
+        left: 0;
+        height: 2px;
+        z-index: 1;
+    }
+}
+.system-tabs__mn {
+    opacity: 0;
+    visibility: hidden;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.2);
+    transition: all 0.25s ease-in-out;
+    li {
+        list-style: none;
+        &.hidden {
+            display: none;
+        }
+        a {
+            text-decoration: none;
+            background-color: map-get($system-tabs, submenu-bg);
+            padding: 5px 10px;
+            display: block;
+            color: map-get($system-tabs, submenu-item-text);
+            &:hover {
+                background-color: map-get($system-tabs, submenu-item-bg-hover);
+                color: map-get($system-tabs, submenu-item-text-hover);
+            }
+        }
+        &.is-active {
+            a {
+                background-color: map-get($system-tabs, submenu-item-bg-active);
+                color: map-get($system-tabs, submenu-item-text-active);
+                font-weight: 500;
+            }
+        }
+    }
+}

@@ -1,0 +1,96 @@
+@import "../../styles/helpers/_helpers";
+
+.image {
+	width: 638px;
+	@include max-screen(1199px) {width: 468px;}
+	@include max-screen(991px) {width: 638px; margin: auto;}
+	@include max-screen(767px) {width: 100%;}
+}
+.image__big {
+	height: 427px;
+	overflow: hidden;
+	@include max-screen(1199px) {height: 313px;}
+	@include max-screen(991px) {height: 427px;}
+	@include max-screen(767px) {height: 410px;}
+	@include max-screen(639px) {height: 304px;}
+	@include max-screen(479px) {height: 63vw;}
+	.image__item {
+		height: 427px;
+		@include max-screen(1199px) {height: 313px;}
+		@include max-screen(991px) {height: 427px;}
+		@include max-screen(767px) {height: 410px;}
+		@include max-screen(639px) {height: 304px;}
+		@include max-screen(479px) {height: 63vw;}
+	}
+	.image__item_video {
+		a {
+			display: block;
+			&:before {
+				content: '';
+				position: absolute;
+				top: 0;
+				left: 0;
+				right: 0;
+				bottom: 0;
+				margin: auto;
+				background: url(../img/svg/video.svg) center no-repeat;
+				z-index: 1;
+			}
+		}
+	}
+}
+.image__item {
+	// img {
+	// 	position: relative;
+	// 	top: 50%;
+	// 	transform: translateY(-50%);
+	// }
+}
+.image__preview {
+	overflow: hidden;
+	margin-top: 10px;
+	@include max-screen(639px) {display: none;}
+	.arrows-slider {
+		left: 13px;
+		right: 13px;
+	}
+	.image__item {
+		cursor: pointer;
+		border: 1px solid transparent;
+		width: 87px;
+		height: 60px;
+		margin-right: 5px;
+		overflow: hidden;
+		@include max-screen(767px) {width: 82px; height: 56px;}
+		// @include max-screen(991px) {width: 84px; height: 59px;}
+		// @include max-screen(991px) {width: 84px; height: 59px;}
+		&.slick-current {
+			// border-color: $color1;
+		}
+	}
+	.image__item_video {
+		&:before {
+			content: '';
+			position: absolute;
+			top: 0;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			margin: auto;
+			background: url(../img/svg/video.svg) center no-repeat;
+			z-index: 1;
+		}
+	}
+}
+.image__preview-inner {
+	width: 548px;
+	margin: auto;
+    height: 100px;
+    display: flex;
+    flex-wrap: wrap;
+    flex: 0 0 auto;
+	@include max-screen(1199px) {width: 362px;}
+	@include max-screen(991px) {width: 548px;}
+	@include max-screen(767px) {width: 518px;}
+	// @include max-screen(991px) {width: 260px;}
+}

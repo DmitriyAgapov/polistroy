@@ -1,0 +1,106 @@
+@import "../../styles/helpers/_helpers";
+
+.filter-panel__overlay {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    visibility: hidden;
+    z-index: 1000;
+    transition: all 0.25s ease-in-out;
+}
+.filter-panel {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 999;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.25s ease-in-out;
+    &.active {
+        opacity: 1;
+        visibility: visible;
+        .filter-panel__overlay {
+            opacity: 1;
+            visibility: visible;
+        }
+        .filter-panel__panel {
+            opacity: 1;
+            visibility: visible;
+            @include screen(480px, 1199px) {
+                transform: translateX(0);
+            }
+        }
+    }
+    .close {
+        position: absolute;
+        top: 15px;
+        right: 15px;
+    }
+}
+.filter-panel__panel {
+    background-color: #fff;
+    z-index: 1000;
+    position: fixed;
+    top: 0;
+    height: 100%;
+    left: 0;
+    width: 100%;
+    transition: all 0.25s ease-in-out;
+    @include screen(480px, 1199px) {
+        width: 300px;
+        transform: translateX(-100%);
+    }
+    @include max-screen(479px) {
+        width: 100%;
+    }
+}
+.filter-panel__hd {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 60px;
+    padding: 0 20px;
+    display: flex;
+    align-items: center;
+    z-index: 1;
+    border-bottom: 1px solid rgba(0,0,0,0.1);
+}
+.filter-panel__cont {
+    height: 100%;
+    padding-top: 60px;
+    padding-bottom: 60px;
+    .filter__action,
+    .form-actions {
+        display: none;
+    }
+}
+.filter-panel__inner {
+    max-height: 100%;
+    overflow: auto;
+    padding: 15px;
+}
+.filter-panel__ft {
+    height: 60px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 0 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-top: 1px solid rgba(0,0,0,0.1);
+    .filter__action {
+        margin: 0;
+    }
+    .filter-clear {
+        margin-right: 15px;
+    }
+}

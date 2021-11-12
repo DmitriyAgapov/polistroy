@@ -1,0 +1,82 @@
+.hidden,
+.visually-hidden {
+    display: none;
+}
+.messages {
+    padding: .75rem 1.25rem !important;
+    margin-bottom: 1rem;
+    border: 1px solid transparent !important;
+    border-radius: .25rem !important;
+}
+//.messages + .messages {
+//  margin-top:1.538em;
+//}
+.messages__list {
+    margin: 0 !important;
+    padding: 0 !important;
+}
+.messages__item {
+    margin-bottom: 0 !important;
+    list-style: disc !important;
+    &:before {
+        display: none !important;
+    }
+}
+.messages__item + .messages__item {
+    margin-top: 0 !important;
+}
+.messages--status {
+    color: #155724 !important;
+    background-color: #d4edda !important;
+    border-color: #c3e6cb !important;
+    box-shadow: none !important;
+    background-image: none !important;
+}
+.messages--warning {
+    color: #856404 !important;
+    background-color: #fff3cd !important;
+    border-color: #efe0b2 !important;
+    box-shadow: none !important;
+    background-image: none !important;
+}
+.messages--error {
+    color: #721c24 !important;
+    background-color: #f8d7da !important;
+    border-color: #f5c6cb !important;
+    box-shadow: none !important;
+    background-image: none !important;
+}
+.messages__close {
+    position: absolute;
+    z-index: 1;
+    top: 10px;
+    right: 20px;
+    width: 32px;
+    height: 32px;
+    text-indent: -999999px;
+    cursor: pointer;
+    opacity: .5;
+    &::before,
+    &::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        width: 14px;
+        height: 2px;
+        margin: auto;
+        transition: all 0.25s ease-in-out;
+        background-color: #000;
+    }
+    &::before {
+        transform: rotate(45deg);
+    }
+    &::after {
+        transform: rotate(-45deg);
+    }
+    &:hover {
+        opacity: 1;
+    }
+}

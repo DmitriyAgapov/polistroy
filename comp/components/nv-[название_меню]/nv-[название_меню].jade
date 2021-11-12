@@ -1,0 +1,44 @@
+// nv - Меню. Обычное.
+//- nv__item_expanded           — класс (у li) обозначающий, что есть подпункты и они развернуты
+//- nv__item_colapsed           — класс (у li) обозначающий, что есть подпункты и они скрыты, откроются только после перехода на страницу
+//- nv__item_active             — класс (у li) обозначающий, что пункт активен
+//- nv__link_active             — класс (у ссылки) обозначающий, что открыта текущая страница
+//- nv__item-1                  — уникальный класс для пунктов
+//- nv-submenu__item_active     — класс (у li в подменю) обозначающий, что пункт активен
+//- nv-submenu__link_active     — класс (у ссылки в подменю) обозначающий, что открыта текущая страница
+
++b.nv.nv-[название_меню]
+    +e.list.UL
+        +e.item
+            +e.link.A(href='#') Item 1
+        +e.item
+            +e.link.A(href='#') Item 2
+        +e.item
+            +e.link.A(href='#') Item 3
+        +e.item
+            +e.link.A(href='#') Item 4
+// КОНЕЦ: nv
+
+// nv1 - Меню. Выпадающее. Обычное.
++b.nv.nv-[название_меню]
+    +e.list.UL
+        +e.item.__item-1
+            +e.link.A(href='#') Item 1
+        +e.item_expanded.__item-2
+            +e.link.A(href='#') Item 2
+            +b.nv-submenu.nv__submenu(style="opacity: 0; visibility: hidden;")
+                +e.inner
+                    +e.UL.list
+                        +e.item
+                            +e.link.A(href="#") История
+                        +e.item
+                            +e.link.A(href="#") Инфраструктура
+                        +e.item
+                            +e.link.A(href="#") Отзывы о нас
+                        +e.item
+                            +e.link.A(href="#") Вакансии
+                        +e.item
+                            +e.link.A(href="#") Сотрудничетсво с турагенствами
+                        +e.item
+                            +e.link.A(href="#") Реквизиты
+// КОНЕЦ: nv
